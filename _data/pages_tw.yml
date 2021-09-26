@@ -9,6 +9,7 @@
       scroll_text: 捲動
       scroll_image: /img/0.Start-triangle.svg
       lang_select: 以其他語言閱讀
+      my_lang: tw
 - type: content
   content:
     - source: title.html

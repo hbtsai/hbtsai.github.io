@@ -1,9 +1,15 @@
 en:
+  icon_url: img/en.svg
+  pressed_icon_url: img/p_en.svg
   label: English
-  icon: us
+  icon: en
 tw:
+  icon_url: img/tw.svg
+  pressed_icon_url: img/p_tw.svg
   label: 繁體中文
   icon: tw
 cn:
+  icon_url: img/cn.svg
+  pressed_icon_url: img/p_cn.svg
   label: 简体中文
   icon: cn

@@ -9,6 +9,7 @@
       scroll_text: Scroll
       scroll_image: /img/0.Start-triangle.svg
       lang_select: Read this page in
+      my_lang: en
 - type: content
   content:
     - source: title.html
