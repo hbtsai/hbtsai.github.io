@@ -1,0 +1,642 @@
+- type: start
+  content:
+    - source: start.html
+      alert: alert('test')
+      landing_image: /img/0.Start-Products.svg
+      logo: /img/0.Start-logo.svg
+      title: QUICK START GUIDE
+      version: V2.0
+      scroll_text: Scroll
+      scroll_image: /img/0.Start-triangle.svg
+      lang_select: Read this page in
+- type: content
+  content:
+    - source: title.html
+      title: Identify Panel
+    - source: page-note.html
+      page_number: 1
+    - source: row-select.html
+      id: panel-type
+      rows:
+        - title: 3-phase Panel
+          id: three
+          selected: true
+          content:
+            - source: stepper.html
+              id: panel-voltage
+              items:
+              - text: 120/208V
+                id: 120-208
+              - text: 277/480V
+                id: 277-480
+                selected: true
+        - title: Split-phase Panel
+          id: split
+        - title: Single-phase Panel
+          id: single
+    - source: switch.html
+      id: small-ct
+      text: Are there breakers rated ≤ 60A?
+      content:
+        - source: stepper.html
+          id: has-small-ct
+    - source: switch.html
+      id: large-ct
+      text: Are there breakers rated > 60A?
+      content:
+        - source: stepper.html
+          id:  has-large-ct
+    - source: warning.html
+      text: The panel must have a neutral phase.
+        #    - source: color-picker.html
+- type: content
+  content:
+    - source: title.html
+      title: Mounting Location
+    - source: page-note.html
+      page_number: 5
+    - source: row-select.html
+      id: mounting-location
+      rows:
+        - title: Side of Panel
+          id: side
+          selected: true
+        - title: Junction Box
+          id: box
+    - source: embed.html
+      type: image
+      embed: /img/2.MountingLocation-clearance.svg
+      title: Clearance required as follows
+    - source: embed.html
+      title: For alternate mounting options contact support@verdigris.co
+- type: content
+  content:
+    - source: title.html
+      title: Components
+    - source: page-note.html
+      page_number: 3
+    - source: embed.html
+      type: image
+      embed: /img/3.Components-1.DataTransmitter.svg
+      caption: Data Transmitter
+    - source: embed.html
+      type: image
+      embed: /img/3.Components-2.CT.svg
+      caption: Current Transformer (CT)
+      classes: small
+    - source: embed.html
+      type: image
+      embed: /img/3.Components-3.VoltageTapCabling.svg
+      caption: Voltage Tap Cabling
+    - source: embed.html
+      type: image
+      embed: /img/3.Components-4.ExtensionCable.svg
+      caption: 200mm, 1m, 3m CT Chain Extension Cables
+    - source: embed.html
+      type: image
+      embed: /img/3.Components-5.ChaseNipple.svg
+      caption: 1” Chase Nipple
+      classes: not-dry
+    - source: embed.html
+      type: image
+      embed: /img/3.Components-6.Locknut.svg
+      caption: 1” Locknut
+    - source: embed.html
+      type: image
+      embed: /img/3.Components-7.GIM.svg
+      caption: Generic Interface Module (GIM)
+      classes: large
+    - source: embed.html
+      type: image
+      embed: /img/3.Components-8.LargeCTSymbol.svg
+      caption: In this installation guide, we will use this symbol to represent large CTs.
+      classes: large
+    - source: embed.html
+      type: image
+      embed: /img/3.Components-9.MountingPlate.svg
+      caption: Mounting Plate
+      classes: dry
+- type: content
+  content:
+    - source: title.html
+      title: Tools &amp; Parts Required
+    - source: page-note.html
+      page_number: 4
+    - source: list.html
+      title: Tools you need to prepare
+      type: dash
+      icon: /img/4.Tools.svg
+      items:
+        - text: Wire stripper
+        - text: Screwdrivers
+        - text: 1/8” Allen key
+        - text: Impact drill or Power drill with hole cutter (1”)  or knockout punch set (1”)
+          classes: not-dry
+        - text: Impact drill (to open the panel)
+          classes: dry
+        - text: Power drill with hole cutter (1”)  or knockout punch set (1”)
+          classes: dry
+        - text: Hammer
+        - text: Drywall saw (recessed panel only)
+          classes: dry
+        - text: Colored electric tape (specific to panel phase color coding) &amp; marker
+    - source: list.html
+      type: dash
+      title: Parts you need to prepare
+      icon: /img/4.Parts.svg
+      items:
+        - text: Cable ties (up to 25 per panel)
+        - text: Wire nuts
+          classes: not-dry
+        - text: Wire nuts (size dependent on size of panel breaker wires to be tapped)
+          classes: dry
+        - text: Colored electric tape (specific to panel phase color coding)
+          classes: dry
+        - text: 2-3/4” flex conduit connectors
+          classes: dry
+        - text: 3/4” flex electrical conduit
+          classes: dry
+- type: content
+  content:
+    - source: title.html
+      title: Install FWC
+    - source: page-note.html
+      page_number: 5
+    - source: embed.html
+      type: image
+      embed: /img/5.InstallFWC-1.FWC.svg
+      classes: not-dry
+    - source: embed.html
+      classes: side
+      embed: /img/5.InstallFWC-2.animation/fwc_1.html
+      height: 640px
+    - source: text.html
+      classes: dry
+      text: <strong>Dry wall near panel</strong> (for recessed panels) There must be at least 15.5” x 5.5” x 5.5” space near the panel on drywall. In this section, the mounting plate for the Data Transmitter will be installed only. FWC installation will come at a later stage.
+    - source: list.html
+      type: numbered
+      classes: dry
+      items:
+        - text: Select location for mounting plate on dry wall near panel.
+        - text: "Create a hole in the drywall large enough to allow the entire 3/4”  conduit connector to pass through. NOTE: Hole should not be greater than 1.9” diameter."
+        - text: Look for an existing 3/4” knockout in the panel or create a new 3/4” knockout, using the knockout punch or a power drill with a hole cutter.
+        - text: "Attach a 3⁄4” conduit connector to one end of conduit.NOTE: Conduit should be sized 4-6” longer than the required length to connect panel and drywall holes."
+        - text: "Route conduit through drywall and secure connector to panel via locknut.NOTE: The free end of conduit should stick out of the drywall hole."
+        - text: Attach3/4”conduit connector to the free end of conduit.
+        - text: Fasten connector to the internal threads of the mounting plate.
+        - text: Once conduit is secured to the mounting plate, use 4 drywall screws and anchors to attach mounting plate onto drywall.
+    - source: embed.html
+      classes: dry
+      embed: /img/5.InstallFWC-2.animation/fwc_2.html
+      height: 640px
+    - source: embed.html
+      classes: box
+      embed: /img/5.InstallFWC-2.animation/fwc_3.html
+      height: 640px
+- type: content
+  content:
+    - source: title.html
+      title: Voltage Taps
+    - source: page-note.html
+      page_number: 6-7
+    - source: text.html
+      text: Select one breaker per phase of panel to tap.
+    - source: stepper.html
+      id: breakers
+      items:
+      - text: Using spare breakers
+        id: spare
+        selected: true
+      - text: Using wired breakers
+        id: wired
+        classes: three
+      - text: Using wired breakers
+        id: wired
+        classes: split
+      - text: Using wall plug
+        id: wall
+        classes: single
+    - source: text.html
+      text: If you do not have one spare breaker on each voltage phase, you will need to briefly shut down the voltage tap breakers to complete this step. Please confirm with building operators that this will not interfere with operations or safety protocols. Please follow local jurisdiction requirements for tap installs.
+      classes: three wired
+    - source: text.html
+      text: If you do not have one spare breaker on each voltage phase, you will need to briefly shut down the voltage tap breakers to complete this step. Please confirm with building operators that this will not interfere with operations or safety protocols. Please follow local jurisdiction requirements for tap installs.
+      classes: split wired
+    - source: text.html
+      text: If there are no spare breakers, you can power the system from a wall plug. Strip the cable, to identify neutral and power, you do not need ground. Please confirm with building operators and follow local jurisdiction.
+      classes: single wall
+    - source: text.html
+      text: Ensure the breakers are turned off. Connect 1 voltage tap cable to breaker.
+      classes: single spare
+    - source: text.html
+      text: Ensure the breakers are turned off. Connect 2 voltage tap cables to breakers.
+      classes: three spare
+    - source: text.html
+      text: Ensure the breakers are turned off. Connect 2 voltage tap cables to breakers.
+      classes: split spare
+    - source: embed.html
+      embed: /img/6.InsertVoltageTaps-3Phases.svg
+      classes: three spare
+      type: svg
+    - source: embed.html
+      embed: /img/6.InsertVoltageTaps-2Phases.svg
+      classes: split spare
+      type: svg
+    - source: text.html
+      title: Wire The Neutral
+      text: Attach the <span id="neutral">white</span> voltage tap cable to the neutral bar.
+    - source: text.html
+      title: Route Wires
+      text: Route wires through knockout and into the FWC.
+    - source: embed.html
+      embed: /img/6.InsertVoltageTaps-3PhasesRouteWires.svg
+      classes: three
+      type: svg
+    - source: embed.html
+      embed: /img/6.InsertVoltageTaps-2PhasesRouteWires.svg
+      classes: split
+      type: svg
+    - source: embed.html
+      embed: /img/6.InsertVoltageTaps-1PhasesRouteWires.svg
+      classes: single
+      type: svg
+- type: content
+  content:
+    - source: title.html
+      title: Select CTs &amp; Verify CT Locations
+    - source: page-note.html
+      page_number: 8-9
+    - source: text.html
+      title: "CTs:"
+    - source: list.html
+      type: dash
+      classes: small
+      items:
+        - text: Verdigris CT (60A)
+    - source: embed.html
+      classes: small
+      embed: /img/7.SelectCT-1-Open CT animation/CT-anim.html
+      height: 260px
+      caption: Pull and drag the tap to open CT
+      caption_style: light
+    - source: list.html
+      type: dash
+      classes: large
+      items:
+        - text: Large CT  (≥200A or custom size)
+    - source: embed.html
+      classes: large
+      embed: /img/7.largeCTsSymbol-2.svg
+      height: 140px
+      caption: Open large CT
+      caption_style: light
+    - source: text.html
+      title: "GIM:"
+      classes: large
+    - source: text.html
+      text: Up to 3 Large CTs pair with each GIM.
+      classes: large
+    - source: embed.html
+      type: image
+      embed: /img/7.SelectCT-3-GIM.svg
+      classes: large
+    - source: embed.html
+      embed: /img/7.SelectCT-2-circuitBreakers.svg
+      classes: small-only three
+      type: svg
+      caption: Required clearance
+      caption_style: light
+    - source: embed.html
+      embed: /img/7.SelectCT-5-splitPhase.svg
+      classes: small-only split
+      type: svg
+      caption: Required clearance
+      caption_style: light
+- type: content
+  content:
+    - source: title.html
+      title: Install &amp; Connect CTs
+    - source: page-note.html
+      page_number: 8
+    - source: text.html
+      text: Clips CTs on circuits to be monitored. Make sure direction of load arrow on the CT points away from the breaker. Clearance required for adjacent CT installation.
+      classes: small
+    
+    - source: embed.html
+      type: svg
+      embed: /img/8.Install&amp;ConnectCTs-clearance-v2-r.svg
+      classes: small three
+    - source: embed.html
+      type: svg
+      embed: /img/8.Install&amp;ConnectCTs-clearance-v2-l.svg
+      classes: small three
+    
+    - source: embed.html
+      type: svg
+      embed: /img/8.Install&amp;ConnectCTs-clearance_splitPhase.svg
+      classes: small split
+    
+    - source: embed.html
+      classes: small interactive
+      embed: /img/8.Install&amp;ConnectCTs-installCTAnim/install_CT.html
+      height: 220px
+
+    - source: text.html
+      title: Large CT and GIM
+      text: Insert CT wires into GIM terminals, match CT wire with GIM terminal colors.
+      classes: large
+    - source: embed.html
+      type: image
+      embed: /img/8.Install&amp;ConnectCTs-connectLargeCTtoGIM-v2.svg
+      classes: large
+    - source: text.html
+      text: Connect CT chain using extension cables and route wires through knockout into FWC.
+
+    - source: embed.html
+      embed: /img/8.Install&amp;ConnectCTs-connectCTs.svg
+      classes: small-only three
+      type: svg
+    - source: embed.html
+      embed: /img/8.Install&ConnectCTs-connectCTs_splitPhase.svg
+      classes: small-only split
+      type: svg
+    - source: embed.html
+      embed: /img/8.Install&ConnectCTs-connectCTs_singlePhase.svg
+      classes: small-only single
+      type: svg
+    
+    - source: embed.html
+      embed: /img/8.Install&amp;ConnectCTs-connectLargeCTs-v2-three.svg
+      classes: large-only three
+      type: svg
+    - source: embed.html
+      embed: /img/8.Install&amp;ConnectCTs-connectLargeCTs-v2-split.svg
+      classes: large-only split
+      type: svg
+    - source: embed.html
+      embed: /img/8.Install&amp;ConnectCTs-connectLargeCTs-v2-single.svg
+      classes: large-only single
+      type: svg
+
+
+    - source: embed.html
+      embed: /img/8.Install&amp;ConnectCTs-connectMixCTs-v2-three.svg
+      classes: small large three
+      type: svg
+    - source: embed.html
+      embed: /img/8.Install&amp;ConnectCTs-connectMixCTs-v2-split.svg
+      classes: small large split
+      type: svg
+    - source: embed.html
+      embed: /img/8.Install&amp;ConnectCTs-connectMixCTs-v2-single.svg
+      classes: small large single
+      type: svg
+
+- type: content
+  content:
+    - source: title.html
+      title: Connect to Data Transmitter
+    - source: page-note.html
+      page_number: 12
+    - source: stepper.html
+      id: chains
+      items:
+      - text: 2 CT Chains
+        id: two
+        selected: true
+      - text: 1 CT Chain
+        id: one
+    - source: embed.html
+      embed: /img/9.ConnectToBud-1-3Phases2CTchains.svg
+      classes: three two
+      type: svg
+    - source: embed.html
+      embed: /img/9.ConnectToBud-2-3Phases1CTchain.svg
+      classes: three one
+      type: svg
+    - source: embed.html
+      embed: /img/9.ConnectToBud-3-2Phases2CTchains.svg
+      classes: split two
+      type: svg
+    - source: embed.html
+      embed: /img/9.ConnectToBud-4-2Phases1CTchain.svg
+      classes: split one
+      type: svg
+    - source: embed.html
+      embed: /img/9.ConnectToBud-3-1Phases2CTchains.svg
+      classes: single two
+      caption: For single phase installations, cable A plugs into the spot for Cable B to power the system.
+      caption_style: light
+      type: svg
+    - source: embed.html
+      embed: /img/9.ConnectToBud-4-1Phases1CTchain.svg
+      classes: single one
+      caption: For single phase installations, cable A plugs into the spot for Cable B to power the system.
+      caption_style: light
+      type: svg
+- type: content
+  content:
+    - source: title.html
+      title: Mount Data Transmitter
+    - source: page-note.html
+      page_number: 16
+    - source: text.html
+      text: Support data transmitter bottom until screws are secured from the top.
+    - source: embed.html
+      classes: three
+      type: svg
+      embed: /img/10.MountBud.svg
+    - source: embed.html
+      classes: split
+      type: svg
+      embed: /img/10.MountBud_splitPhase.svg
+    - source: embed.html
+      classes: single
+      type: svg
+      embed: /img/10.MountBud_singlePhase.svg
+    - source: embed.html
+      type: svg
+      embed: /img/11.Cleanup-Bud.svg
+    - source: text.html
+      text: Slide open the bottom section of the data transmitter and find the indicator lights. Orient the data transmitter so that the indicator lights are visible.
+- type: content
+  content:
+    - source: title.html
+      title: Check &amp; Cleanup
+    - source: page-note.html
+      page_number: 19-20
+    - source: header.html
+      text: Powering Data Transmitter
+    - source: text.html
+      text: Turn breakers used for voltage tap on. The light ring will light up after up to 30 seconds.
+    - source: text.html
+      text: Select the device that looks like your system.
+    - source: embed-confirmation.html
+      embedSuccess: /img/confirmation-light-success.html
+      embedError: /img/confirmation-light-error.html
+      height: 320px
+    
+    - source: stepper.html
+      id: confirmation
+      classes: confirmation-selector-button
+      items:
+      - text: My System is Flashing White
+        id: confirmationSuccess
+      - text: My System is Flashing Red
+        id: confirmationError
+
+    - source: text.html
+      text: A pulsing white light indicates that the system is properly installed and ready for commissioning.
+      classes: confirmationSuccess space-bottom
+    - source: end.html
+      header: The next step is to proceed with the commissioning process.
+      text: The system is emitting a wifi network your device can connect to in order to comission your system.
+      classes: confirmationSuccess
+      closing_image: /img/11.Cleanup-Mobile.svg
+
+    - source: text.html
+      text: A pulsing red light indicates that the system has an error. Click <a href="http://verdigris.co/pdf/Verdigris_Install.pdf">here</a> for details on service panel lights.
+      classes: confirmationError
+    - source: text.html
+      text: Select the error lights in the service panel that are red or yellow?
+      classes: confirmationError
+    - source: error-selection.html
+    
+    - source: text.html
+      text: If there are multiple red and yellow lights please unplug the bud and replug it back in so it can reset.
+      classes: multiple
+
+    - source: text.html
+      text: What does the light look like?
+      classes: error-light-selector
+    - source: stepper.html
+      id: error-light
+      classes: error-light-selector
+      items:
+      - text: Blinking Red
+        id: ct-blinking-red
+        classes: ct
+      - text: Solid Red
+        id: ct-solid-red
+        classes: ct
+      - text: Blinking White
+        id: ct-blinking-white
+        classes: ct
+      - text: Blinking Green
+        id: voltage-blinking-green
+        classes: voltage
+      - text: Solid Green
+        id: voltage-solid-green
+        classes: voltage
+      - text: Solid Red
+        id: voltage-solid-red
+        classes: voltage
+      - text: Blinking White
+        id: voltage-blinking-white
+        classes: voltage
+      - text: Blinking White
+        id: connectivity-blinking-white
+        classes: connectivity
+      - text: Blinking Red
+        id: connectivity-blinking-red
+        classes: connectivity
+      - text: Solid Red
+        id: connectivity-solid-red
+        classes: connectivity
+    
+    - source: text.html
+      text: There is a break in CT chain 2. Properly connected CT LEDs will be blinking white; excess CT LEDs will be off.
+      classes: ct-solid-red
+    - source: embed.html
+      embed:  /img/12.Install&ConnectCTs-connectMixCTs-chainbreak2.html
+      classes: ct-solid-red
+      height: 400px
+    - source: text.html
+      text: In the example above there is a break between the 2nd and 3rd CTs on the left. This can be an issue with the start of the cable in the 2nd CT or at the connector in the 3rd CT.
+      classes: ct-solid-red
+    - source: text.html
+      text: Fix this connection issue by removing and adding back in the 2nd and 3rd CTs. If this issue persists please reach out to support@verdigris.co.
+      classes: ct-solid-red
+
+    - source: text.html
+      text: There is a break in CT chain 1. Properly connected CT LEDs will be blinking white; excess CT LEDs will be off.
+      classes: ct-blinking-red
+    - source: embed.html
+      embed:  /img/12.Install&ConnectCTs-connectMixCTs-chainbreak1.html
+      classes: ct-blinking-red
+      height: 400px
+    - source: text.html
+      text: In the example above there is a break between the 2nd and 3rd CTs on the right. This can be an issue with the start of the cable in the 2nd CT or at the connector in the 3rd CT.
+      classes: ct-blinking-red
+    - source: text.html
+      text: Fix this connection issue by removing and adding back in the 2nd and 3rd CTs. If this issue persists please reach out to support@verdigris.co.
+      classes: ct-blinking-red
+
+    - source: text.html
+      text: System is performing chain check. Wait for LED indicator to change. System will cycle to check CT chain integrity every 10 seconds.
+      classes: ct-blinking-white
+
+
+    
+    - source: text.html
+      text: System is processing. CT chain indicator must be green first for LED indicator to change.
+      classes: voltage-blinking-white
+    - source: text.html
+      text: Two voltage phases and neutral detected.
+      classes: voltage-solid-red
+    - source: text.html
+      text: Single voltage phase and neutral detected.
+      classes: voltage-blinking-green
+    - source: text.html
+      text: Three voltage phase and neutral detected.
+      classes: voltage-solid-green
+
+    # - source: text.html
+    #   text: Voltage configuration not recognized. Check the voltage taps are connected correctly.
+    #   classes: voltage-blinking-red
+    # - source: text.html
+    #   text: There is a break in CT chain. Properly connected CT LEDs will be blinking white; excess CT LEDs will be off.
+    #   classes: voltage-solid-yellow
+    # - source: embed.html
+    #   embed:  /img/12.Install&ConnectCTs-connectMixCTs-chainbreak1.html
+    #   classes: voltage-solid-yellow
+    #   height: 400px
+    # - source: text.html
+    #   text: In the example above there is a break between the 2nd and 3rd CTs on the left.
+    #   classes: voltage-solid-yellow
+    # - source: text.html
+    #   text: Try to fix this issue by reconnecting cables between CTs to ensure everything is connected.  If this issue persists please reach out to support@verdigris.co.
+    #   classes: voltage-solid-yellow
+
+
+
+    - source: text.html
+      text: Cannot connect to Internet, please connect to the system via your mobile device to debug wireless connectivity. (See page 20 of your installation manual).
+      classes: connectivity-blinking-red
+    - source: text.html
+      text: Cannot connect to Internet, please press the reset button for 1second to bring up setup-tools and debug wireless connectivity. (See page 20 of your installation manual).
+      classes: connectivity-solid-red    
+    - source: text.html
+      text: The system is busy.
+      classes: connectivity-blinking-white
+
+    - source: text.html
+      text: Make changes to your system and then wait 30-120 seconds for the system to run tests again.
+      classes: error-fix
+    - source: text.html
+      text: Did this resolve your issue?
+      classes: error-fix
+    - source: stepper.html
+      id: error-fix-selector
+      classes: error-fix
+      items:
+      - text: Fixed
+        id: fix-yes
+        classes: error-fix
+      - text: Still Broken
+        id: fix-no
+        classes: error-fix
+    - source: text.html
+      text: We apologize that you are still experiencing issues.  Please click <a href='http://verdigris.co/support'>here</a> to speak with the Verdigris support team.
+      classes: fix-no
+    

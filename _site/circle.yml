@@ -1,0 +1,23 @@
+machine:
+  environment:
+    NOKOGIRI_USE_SYSTEM_LIBRARIES: true # speeds up installation of html-proofer
+
+dependencies:
+  post:
+    - bundle exec jekyll build -d _site/quickstart-guide
+
+test:
+  post:
+    - bundle exec htmlproofer ./_site --allow-hash-href --check-favicon --check-html --disable-external
+    - bundle exec yaml-lint {,**/}*.yml
+    - bundle exec scss-lint
+    - bundle exec rake eslint
+    - bundle exec rake jasmine:ci
+
+TODO create a user for circleci with write-permissions
+See: https://github.com/DevProgress/onboarding/wiki/Using-Circle-CI-with-Github-Pages-for-Continuous-Delivery#creating-a-machine-user
+deployment:
+ staging:
+   branch: development
+   commands:
+     - ./scripts/deploy-master.sh build

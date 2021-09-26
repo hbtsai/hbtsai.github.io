@@ -1,0 +1,9 @@
+<div class="divider">
+  <img alt="divider-up" src="{{ '/img/1.IdentifyPanel-triangle.svg' | relative_url}}" style="display: none;">
+  {% if include.page_number == 0 %}
+    <p>Pull harder to load next</p>
+  {% else %}
+    <p>Next</p>
+  {% endif %}
+  <img alt="divider-down" src="{{ '/img/1.IdentifyPanel-triangle.svg' | relative_url}}">
+</div>

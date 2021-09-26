@@ -1,0 +1,17 @@
+<div id="{{ content.id }}" class="row-select">
+  {% for row in content.rows %}
+    {% if forloop.first == false %}
+      <div class="separator"></div>
+    {% endif %}
+    <div id="{{ row.id }}" class="row" {% if row.selected %} selected="true" {% endif %} onclick="selectModule.selectItem('{{ content.id }}', '{{ row.id }}', event);">
+      <p class="row-select-title">{{ row.title }}</p>
+      {% if row.content %}
+        <div class="row-content">
+          {% for content in row.content %}
+            {% include {{content.source}} %}
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>

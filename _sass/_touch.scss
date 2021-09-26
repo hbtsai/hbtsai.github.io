@@ -1,0 +1,31 @@
+@media (min-width: 1025px) {
+  // Allow nontouch scrolling on desktops
+  .nontouch {
+    .scroll-container {
+      height: 100vh;
+      overflow: scroll;
+
+      .sidebar {
+        @include display(flex);
+        padding-bottom: 10000px;
+        margin-bottom: -10000px;
+      }
+
+      .content {
+        @include calc(width, '100% - 40px');
+        display: inline-block;
+      }
+    }
+
+    .page {
+      height: auto;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    .divider {
+      height: 0;
+      padding: 4px;
+    }
+  }
+}

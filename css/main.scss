@@ -1,0 +1,35 @@
+---
+---
+// Suppress bourbon deprecation warnings for vendor prefix mixins.
+// Github Pages currently does not support post-processing for prefixing,
+// so SCSS mixins are required.
+$output-bourbon-deprecation-warnings: false;
+
+@import 'vendor/bourbon/bourbon';
+@import 'variables';
+@import 'fonts';
+@import 'mixins';
+@import 'basic';
+@import 'sidebar';
+@import 'divider';
+@import 'start';
+@import 'content';
+@import 'touch';
+
+// Liquid templates only supported in this file, not imports
+
+// scss-lint:disable UrlFormat
+.content {
+  .row-select .row-select-title::after {
+    content: url('{{ "/img/1.IdentifyPanel-check.svg" | relative_url }}');
+  }
+
+  .warning p::before {
+    content: url('{{ "/img/1.IdentifyPanel-warning.svg" | relative_url }}');
+  }
+
+  .color-picker .color::after {
+    content: url('{{ "/img/1.IdentifyPanel-check.svg" | relative_url }}');
+  }
+}
+// scss-lint:enable UrlFormat

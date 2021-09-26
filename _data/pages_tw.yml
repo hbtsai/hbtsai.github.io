@@ -1,0 +1,642 @@
+- type: start
+  content:
+    - source: start.html
+      alert: alert('test')
+      landing_image: /img/0.Start-Products.svg
+      logo: /img/0.Start-logo.svg
+      title: 快速安裝手冊
+      version: V2.0
+      scroll_text: 捲動
+      scroll_image: /img/0.Start-triangle.svg
+      lang_select: 以其他語言閱讀
+- type: content
+  content:
+    - source: title.html
+      title: 辨識配電盤類型
+    - source: page-note_tw.html
+      page_number: 1
+    - source: row-select.html
+      id: panel-type
+      rows:
+        - title: 三相配電盤
+          id: three
+          selected: true
+          content:
+            - source: stepper.html
+              id: panel-voltage
+              items:
+              - text: 120/208V
+                id: 120-208
+              - text: 277/480V
+                id: 277-480
+                selected: true
+        - title: 兩相配電盤
+          id: split
+        - title: 單相配電盤
+          id: single
+    - source: switch.html
+      id: small-ct
+      text: 這些斷路器的規格是否小於 60A?
+      content:
+        - source: stepper.html
+          id: has-small-ct
+    - source: switch.html
+      id: large-ct
+      text: 這些斷路器的規格是否大於 60A?
+      content:
+        - source: stepper.html
+          id:  has-large-ct
+    - source: warning.html
+      text: 配電箱必須配備有中性相
+    - source: color-picker_tw.html
+- type: content
+  content:
+    - source: title.html
+      title: 掛載位置
+    - source: page-note_tw.html
+      page_number: 5
+    - source: row-select.html
+      id: mounting-location
+      rows:
+        - title: 配電箱的側面
+          id: side
+          selected: true
+        - title: 接線盒
+          id: box
+    - source: embed.html
+      type: image
+      embed: /img/2.MountingLocation-clearance.svg
+      title: 四周預留空間如下
+    - source: embed.html
+      title: 其他掛載方式請連絡 support@verdigris.co
+- type: content
+  content:
+    - source: title.html
+      title: 材料清單
+    - source: page-note_tw.html
+      page_number: 3
+    - source: embed.html
+      type: image
+      embed: /img/3.Components-1.DataTransmitter.svg
+      caption: 資料發射器
+    - source: embed.html
+      type: image
+      embed: /img/3.Components-2.CT.svg
+      caption: 電流傳感器 (CT)
+      classes: small
+    - source: embed.html
+      type: image
+      embed: /img/3.Components-3.VoltageTapCabling.svg
+      caption: 電壓接線
+    - source: embed.html
+      type: image
+      embed: /img/3.Components-4.ExtensionCable.svg
+      caption: 200mm, 1m, 3m 傳感器延長線
+    - source: embed.html
+      type: image
+      embed: /img/3.Components-5.ChaseNipple.svg
+      caption: 1” 螺栓
+      classes: not-dry
+    - source: embed.html
+      type: image
+      embed: /img/3.Components-6.Locknut.svg
+      caption: 1” 墊片
+    - source: embed.html
+      type: image
+      embed: /img/3.Components-7.GIM.svg
+      caption: 通用介面模組 (GIM)
+      classes: large
+    - source: embed.html
+      type: image
+      embed: /img/3.Components-8.LargeCTSymbol.svg
+      caption: 在本手冊中，此符號代表大電流傳感器
+      classes: large
+    - source: embed.html
+      type: image
+      embed: /img/3.Components-9.MountingPlate.svg
+      caption: Mounting Plate
+      classes: dry
+- type: content
+  content:
+    - source: title.html
+      title: 必備工具 &amp; 零件
+    - source: page-note_tw.html
+      page_number: 4
+    - source: list.html
+      title: 您需要準備的工具
+      type: dash
+      icon: /img/4.Tools.svg
+      items:
+        - text: 剝線鉗
+        - text: 螺絲起子
+        - text: 1/8” 內六角扳手
+        - text: 衝擊式鑽機或圓穴鋸 (1”) 或穿孔機 (1”)
+          classes: not-dry
+        - text: 衝擊式鑽機 (替配電箱開孔)
+          classes: dry
+        - text: 附挖洞電鑽 (1”) 或穿孔機 (1”)
+          classes: dry
+        - text: 鐵鎚
+        - text: Drywall saw (recessed panel only)
+          classes: dry
+        - text: 不同顏色的電火布 (建議與三相電線顏色相符) &amp; 標籤
+    - source: list.html
+      type: dash
+      title: 您需要準備的零件
+      icon: /img/4.Parts.svg
+      items:
+        - text: 束線帶 (每個電盤約需 25 條)
+        - text: 接線器
+          classes: not-dry
+        - text: Wire nuts (size dependent on size of panel breaker wires to be tapped)
+          classes: dry
+        - text: Colored electric tape (specific to panel phase color coding)
+          classes: dry
+        - text: 2-3/4” flex conduit connectors
+          classes: dry
+        - text: 3/4” flex electrical conduit
+          classes: dry
+- type: content
+  content:
+    - source: title.html
+      title: 安裝線盤組立
+    - source: page-note_tw.html
+      page_number: 5
+    - source: embed.html
+      type: image
+      embed: /img/5.InstallFWC-1.FWC.svg
+      classes: not-dry
+    - source: embed.html
+      classes: side
+      embed: /img/5.InstallFWC-2.animation/fwc_1.html
+      height: 640px
+    - source: text.html
+      classes: dry
+      text: <strong>Dry wall near panel</strong> (for recessed panels) There must be at least 15.5” x 5.5” x 5.5” space near the panel on drywall. In this section, the mounting plate for the Data Transmitter will be installed only. FWC installation will come at a later stage.
+    - source: list.html
+      type: numbered
+      classes: dry
+      items:
+        - text: Select location for mounting plate on dry wall near panel.
+        - text: "Create a hole in the drywall large enough to allow the entire 3/4”  conduit connector to pass through. NOTE: Hole should not be greater than 1.9” diameter."
+        - text: Look for an existing 3/4” knockout in the panel or create a new 3/4” knockout, using the knockout punch or a power drill with a hole cutter.
+        - text: "Attach a 3⁄4” conduit connector to one end of conduit.NOTE: Conduit should be sized 4-6” longer than the required length to connect panel and drywall holes."
+        - text: "Route conduit through drywall and secure connector to panel via locknut.NOTE: The free end of conduit should stick out of the drywall hole."
+        - text: Attach3/4”conduit connector to the free end of conduit.
+        - text: Fasten connector to the internal threads of the mounting plate.
+        - text: Once conduit is secured to the mounting plate, use 4 drywall screws and anchors to attach mounting plate onto drywall.
+    - source: embed.html
+      classes: dry
+      embed: /img/5.InstallFWC-2.animation/fwc_2.html
+      height: 640px
+    - source: embed.html
+      classes: box
+      embed: /img/5.InstallFWC-2.animation/fwc_3.html
+      height: 640px
+- type: content
+  content:
+    - source: title.html
+      title: 電壓接頭
+    - source: page-note_tw.html
+      page_number: 6-7
+    - source: text.html
+      text: 選擇一連接每一相位的斷路器
+    - source: stepper.html
+      id: breakers
+      items:
+      - text: 使用備用斷路器
+        id: spare
+        selected: true
+      - text: 使用進線斷路器
+        id: wired
+        classes: three
+      - text: 使用進線斷路器
+        id: wired
+        classes: split
+      - text: 使用牆面插座
+        id: wall
+        classes: single
+    - source: text.html
+      text: 如果您沒有備用的斷路器，您必須暫時斷電整個電盤來完成安裝工作。請和物業管理員確認此舉動不會造成營運或維安等問題。請遵循當地法規進行安裝。
+      classes: three wired
+    - source: text.html
+      text: 如果您沒有備用的斷路器，您必須暫時斷電整個電盤來完成安裝工作。請和物業管理員確認此舉動不會造成營運或維安等問題。請遵循當地法規進行安裝。
+      classes: split wired
+    - source: text.html
+      text: 如果您沒有備用的斷路器，您必須暫時斷電整個電盤來完成安裝工作。請和物業管理員確認此舉動不會造成營運或維安等問題。請遵循當地法規進行安裝。
+      classes: single wall
+    - source: text.html
+      text: 確定斷路器已斷電，連接 1 電壓接線至斷線器
+      classes: single spare
+    - source: text.html
+      text: 確定斷路器已斷電，連接 3 電壓接線至斷線器
+      classes: three spare
+    - source: text.html
+      text: 確定斷路器已斷電，連接 2 電壓接線至斷線器
+      classes: split spare
+    - source: embed.html
+      embed: /img/6.InsertVoltageTaps-3Phases.svg
+      classes: three spare
+      type: svg
+    - source: embed.html
+      embed: /img/6.InsertVoltageTaps-2Phases.svg
+      classes: split spare
+      type: svg
+    - source: text.html
+      title: 連接中性線
+      text: 將 <span id="neutral">白色</span> 電壓接線連接到中性線銅片.
+    - source: text.html
+      title: 整理線路
+      text: 將所有安裝好的電線穿過鑽孔及線盤組立，拉到電箱外頭
+    - source: embed.html
+      embed: /img/6.InsertVoltageTaps-3PhasesRouteWires.svg
+      classes: three
+      type: svg
+    - source: embed.html
+      embed: /img/6.InsertVoltageTaps-2PhasesRouteWires.svg
+      classes: split
+      type: svg
+    - source: embed.html
+      embed: /img/6.InsertVoltageTaps-1PhasesRouteWires.svg
+      classes: single
+      type: svg
+- type: content
+  content:
+    - source: title.html
+      title: 選擇 CTs &amp; 確認 CT 位置
+    - source: page-note_tw.html
+      page_number: 8-9
+    - source: text.html
+      title: "CTs:"
+    - source: list.html
+      type: dash
+      classes: small
+      items:
+        - text: Verdigris CT (60A)
+    - source: embed.html
+      classes: small
+      embed: /img/7.SelectCT-1-Open CT animation/CT-anim.html
+      height: 260px
+      caption: 將 CT 的卡榫向後拉動以打開 CT
+      caption_style: light
+    - source: list.html
+      type: dash
+      classes: large
+      items:
+        - text: 大電流 CT  (≥200A 或其他規格)
+    - source: embed.html
+      classes: large
+      embed: /img/7.largeCTsSymbol-2.svg
+      height: 140px
+      caption: 打開大電流 CT
+      caption_style: light
+    - source: text.html
+      title: "通用介面模組 (GIM):"
+      classes: large
+    - source: text.html
+      text: 每個通用介面模組可以支援最多 3 個大電流傳感器。
+      classes: large
+    - source: embed.html
+      type: image
+      embed: /img/7.SelectCT-3-GIM.svg
+      classes: large
+    - source: embed.html
+      embed: /img/7.SelectCT-2-circuitBreakers.svg
+      classes: small-only three
+      type: svg
+      caption: 線距應不小於 1 英吋
+      caption_style: light
+    - source: embed.html
+      embed: /img/7.SelectCT-5-splitPhase.svg
+      classes: small-only split
+      type: svg
+      caption: 線距應不小於 1 英吋
+      caption_style: light
+- type: content
+  content:
+    - source: title.html
+      title: 安裝 &amp; 連接 CTs
+    - source: page-note_tw.html
+      page_number: 8
+    - source: text.html
+      text: 將 CT 夾在欲監測的迴路上，並確保電流方向和箭頭方向一致(遠離斷路器方向)。相鄰的 CT 之間應保持 0.5 - 1 英吋的距離。
+      classes: small
+
+    - source: embed.html
+      type: svg
+      embed: /img/8.Install&amp;ConnectCTs-clearance-v2-r.svg
+      classes: small three
+    - source: embed.html
+      type: svg
+      embed: /img/8.Install&amp;ConnectCTs-clearance-v2-l.svg
+      classes: small three
+
+    - source: embed.html
+      type: svg
+      embed: /img/8.Install&amp;ConnectCTs-clearance_splitPhase.svg
+      classes: small split
+
+    - source: embed.html
+      classes: small interactive
+      embed: /img/8.Install&amp;ConnectCTs-installCTAnim/install_CT.html
+      height: 220px
+
+    - source: text.html
+      title: 大電流傳感器與通用介面模組 (GIM)
+      text: 將 CT 的訊號線連接到 GIM，確保訊號線的顏色與 GIM 接口顏色匹配。
+      classes: large
+    - source: embed.html
+      type: image
+      embed: /img/8.Install&amp;ConnectCTs-connectLargeCTtoGIM-v2.svg
+      classes: large
+    - source: text.html
+      text: 將 CT 由上往下連接成一條菊鍊，並透過延長線，穿過開孔拉進線盤組立
+
+    - source: embed.html
+      embed: /img/8.Install&amp;ConnectCTs-connectCTs.svg
+      classes: small-only three
+      type: svg
+    - source: embed.html
+      embed: /img/8.Install&ConnectCTs-connectCTs_splitPhase.svg
+      classes: small-only split
+      type: svg
+    - source: embed.html
+      embed: /img/8.Install&ConnectCTs-connectCTs_singlePhase.svg
+      classes: small-only single
+      type: svg
+
+    - source: embed.html
+      embed: /img/8.Install&amp;ConnectCTs-connectLargeCTs-v2-three.svg
+      classes: large-only three
+      type: svg
+    - source: embed.html
+      embed: /img/8.Install&amp;ConnectCTs-connectLargeCTs-v2-split.svg
+      classes: large-only split
+      type: svg
+    - source: embed.html
+      embed: /img/8.Install&amp;ConnectCTs-connectLargeCTs-v2-single.svg
+      classes: large-only single
+      type: svg
+
+
+    - source: embed.html
+      embed: /img/8.Install&amp;ConnectCTs-connectMixCTs-v2-three.svg
+      classes: small large three
+      type: svg
+    - source: embed.html
+      embed: /img/8.Install&amp;ConnectCTs-connectMixCTs-v2-split.svg
+      classes: small large split
+      type: svg
+    - source: embed.html
+      embed: /img/8.Install&amp;ConnectCTs-connectMixCTs-v2-single.svg
+      classes: small large single
+      type: svg
+
+- type: content
+  content:
+    - source: title.html
+      title: 連接資料發射器
+    - source: page-note_tw.html
+      page_number: 12
+    - source: stepper.html
+      id: chains
+      items:
+      - text: 2 條 CT 鍊
+        id: two
+        selected: true
+      - text: 1 條 CT 鍊
+        id: one
+    - source: embed.html
+      embed: /img/9.ConnectToBud-1-3Phases2CTchains.svg
+      classes: three two
+      type: svg
+    - source: embed.html
+      embed: /img/9.ConnectToBud-2-3Phases1CTchain.svg
+      classes: three one
+      type: svg
+    - source: embed.html
+      embed: /img/9.ConnectToBud-3-2Phases2CTchains.svg
+      classes: split two
+      type: svg
+    - source: embed.html
+      embed: /img/9.ConnectToBud-4-2Phases1CTchain.svg
+      classes: split one
+      type: svg
+    - source: embed.html
+      embed: /img/9.ConnectToBud-3-1Phases2CTchains.svg
+      classes: single two
+      caption: 安裝於單相電盤時，中性線接 N 槽，電源線接 B 槽。
+      caption_style: light
+      type: svg
+    - source: embed.html
+      embed: /img/9.ConnectToBud-4-1Phases1CTchain.svg
+      classes: single one
+      caption: 安裝於單相電盤時，中性線接 N 槽，電源線接 B 槽。
+      caption_style: light
+      type: svg
+- type: content
+  content:
+    - source: title.html
+      title: 掛載資料發射器
+    - source: page-note_tw.html
+      page_number: 16
+    - source: text.html
+      text: 請支撐著資料發射器的底部直到頂端螺絲旋緊
+    - source: embed.html
+      classes: three
+      type: svg
+      embed: /img/10.MountBud.svg
+    - source: embed.html
+      classes: split
+      type: svg
+      embed: /img/10.MountBud_splitPhase.svg
+    - source: embed.html
+      classes: single
+      type: svg
+      embed: /img/10.MountBud_singlePhase.svg
+    - source: embed.html
+      type: svg
+      embed: /img/11.Cleanup-Bud.svg
+    - source: text.html
+      text: 滑開資料發射器底部的保護蓋，找到燈號位置。旋轉資料發射器使燈號朝至適當方向。
+- type: content
+  content:
+    - source: title.html
+      title: 檢查 &amp; 完善
+    - source: page-note_tw.html
+      page_number: 19-20
+    - source: header.html
+      text: 啟動資料發射器
+    - source: text.html
+      text: 打開斷路器的電源，大約 30 秒後，資料發射器的光圈會開始閃爍。
+    - source: text.html
+      text: 請在下方選擇和您的設備狀態相符的圖
+    - source: embed-confirmation.html
+      embedSuccess: /img/confirmation-light-success.html
+      embedError: /img/confirmation-light-error.html
+      height: 320px
+
+    - source: stepper.html
+      id: confirmation
+      classes: confirmation-selector-button
+      items:
+      - text: 我的系統正閃爍著白光
+        id: confirmationSuccess
+      - text: 我的系統正閃爍著紅光
+        id: confirmationError
+
+    - source: text.html
+      text: 閃爍白光表示系統已正確安裝，請繼續系統設置以完成安裝。
+      classes: confirmationSuccess space-bottom
+    - source: end_tw.html
+      header: 請繼續操作進入設置程序。
+      text: 系統正在接受 WiFi 對接，請連接資料發射器以完成設置。
+      classes: confirmationSuccess
+      closing_image: /img/11.Cleanup-Mobile.svg
+
+    - source: text.html
+      text: 閃爍紅光表示系統發現錯誤，請參考 <a href="https://verdigris.co/pdf/Installation-Manual-Ch.pdf">安裝手冊</a> 來辨別錯誤原因。
+      classes: confirmationError
+    - source: text.html
+      text: 請找出正顯示紅色燈號的錯誤類別，並按手冊指示排除故障。
+      classes: error-light-selector
+    - source: error-selection_tw.html
+
+    - source: text.html
+      text: If there are multiple red and yellow lights please unplug the bud and replug it back in so it can reset.
+      classes: dry
+
+    - source: text.html
+      text: 燈號看起來是什麼樣子？
+      classes: error-light-selector
+    - source: stepper.html
+      id: error-light
+      classes: error-light-selector
+      items:
+      - text: 閃爍紅光
+        id: ct-blinking-red
+        classes: ct
+      - text: 長亮紅光
+        id: ct-solid-red
+        classes: ct
+      - text: 閃爍白光
+        id: ct-blinking-white
+        classes: ct
+      - text: 閃爍綠光
+        id: voltage-blinking-green
+        classes: voltage
+      - text: 長亮綠光
+        id: voltage-solid-green
+        classes: voltage
+      - text: 長亮紅光
+        id: voltage-solid-red
+        classes: voltage
+      - text: 閃爍白光
+        id: voltage-blinking-white
+        classes: voltage
+      - text: 閃爍白光
+        id: connectivity-blinking-white
+        classes: connectivity
+      - text: 閃爍紅光
+        id: connectivity-blinking-red
+        classes: connectivity
+      - text: 長亮紅光
+        id: connectivity-solid-red
+        classes: connectivity
+
+    - source: text.html
+      text: 在第 2 條 CT 菊鍊發現連結異常，請檢查 CT 訊號線是否鬆脫。正確連接後，CT 燈號應開始閃爍白燈。
+      classes: ct-solid-red
+    - source: embed.html
+      embed:  /img/12.Install&ConnectCTs-connectMixCTs-chainbreak2.html
+      classes: ct-solid-red
+      height: 400px
+    - source: text.html
+      text: 在上圖範例中，右側第二及第三個 CT 中出現斷點。這有可能是第二個 CT 的接頭未正確卡入第三個 CT 的插槽。
+      classes: ct-solid-red
+    - source: text.html
+      text: 重新安裝或更換第二及第三個 CT 即可順利排除。如果此異常仍無法解決，請連絡 support@verdigris.co。
+      classes: ct-solid-red
+
+    - source: text.html
+      text: 在第 1 條 CT 菊鍊發現連結異常，請檢查 CT 訊號線是否鬆脫。正確連接的 CT 背燈應閃爍白色，其餘 CT 背燈不亮。
+      classes: ct-blinking-red
+    - source: embed.html
+      embed:  /img/12.Install&ConnectCTs-connectMixCTs-chainbreak1.html
+      classes: ct-blinking-red
+      height: 400px
+    - source: text.html
+      text: 在上圖範例中，左側第二及第三個 CT 中出現斷點。這有可能是第二個 CT 的接頭未正確卡入第三個 CT 的插槽。
+      classes: ct-blinking-red
+    - source: text.html
+      text: 重新安裝或更換第二及第三個 CT 即可順利排除。如果此異常仍無法解決，請連絡 support@verdigris.co。
+      classes: ct-blinking-red
+
+    - source: text.html
+      text: 系統正在檢查 CT 菊鍊是否正常安裝，請靜待燈號改變。系統每十秒會進行一次 CT 鍊的完整性檢查。
+      classes: ct-blinking-white
+
+
+
+    - source: text.html
+      text: 系統正在進行處理。
+      classes: voltage-blinking-white
+    - source: text.html
+      text: 偵測到兩相電壓及中性線。
+      classes: voltage-solid-red
+    - source: text.html
+      text: 偵測到單相電壓及中性線。
+      classes: voltage-blinking-green
+    - source: text.html
+      text: 偵測到三相電壓及中性線。
+      classes: voltage-solid-green
+
+    # - source: text.html
+    #   text: Voltage configuration not recognized. Check the voltage taps are connected correctly.
+    #   classes: voltage-blinking-red
+    # - source: text.html
+    #   text: There is a break in CT chain. Properly connected CT LEDs will be blinking white; excess CT LEDs will be off.
+    #   classes: voltage-solid-yellow
+    # - source: embed.html
+    #   embed:  /img/12.Install&ConnectCTs-connectMixCTs-chainbreak1.html
+    #   classes: voltage-solid-yellow
+    #   height: 400px
+    # - source: text.html
+    #   text: In the example above there is a break between the 2nd and 3rd CTs on the left.
+    #   classes: voltage-solid-yellow
+    # - source: text.html
+    #   text: Try to fix this issue by reconnecting cables between CTs to ensure everything is connected.  If this issue persists please reach out to support@verdigris.co.
+    #   classes: voltage-solid-yellow
+
+
+
+    - source: text.html
+      text: 無法連接到網路，請用您的手機連接到資料發射器，檢查網路設定。(或參考安裝手冊第 20 頁)。
+      classes: connectivity-blinking-red
+    - source: text.html
+      text: 無法連接到網路，請長按重設鍵超過一秒鐘，登入資料發射器並檢查網路設定。(或參考安裝手冊第 20 頁)。
+      classes: connectivity-solid-red
+    - source: text.html
+      text: 系統忙碌中，請稍候。
+      classes: connectivity-blinking-white
+
+    - source: text.html
+      text: 確認好您的安裝後，請耐心等待 1~2 分鐘，系統將自動完成檢查。
+      classes: error-fix
+    - source: text.html
+      text: 您的問題是否獲得解決？
+      classes: error-fix
+    - source: stepper.html
+      id: error-fix-selector
+      classes: error-fix
+      items:
+      - text: 修好了
+        id: fix-yes
+        classes: error-fix
+      - text: 仍然有問題
+        id: fix-no
+        classes: error-fix
+    - source: text.html
+      text: 我們非常遺憾未能在快速安裝中完全解決您的問題。請訪問 <a href='http://verdigris.co/support'>支援中心</a> 並與我們的客服團隊連絡。
+      classes: fix-no
+

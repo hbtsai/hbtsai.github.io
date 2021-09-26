@@ -1,0 +1,14 @@
+---
+layout: default
+title: Quick Start Guide
+lang: cn
+---
+{% include sidebar.html %}
+<div id="scroll-container" class="scroll-container">
+  {% for page in site.data.pages_cn %}
+    {% include page.html page_number=forloop.index0 %}
+    {% if forloop.last == false %}
+      {% include divider.html page_number=forloop.index0 %}
+    {% endif %}
+  {% endfor %}
+</div>

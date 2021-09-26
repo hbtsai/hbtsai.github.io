@@ -1,0 +1,22 @@
+.stepper {
+  @include flex-center;
+  @include flex-direction(row);
+  margin-bottom: 9px;
+  border: 1px solid $green;
+  border-radius: 3px;
+
+  .step {
+    @include display(flex);
+    @include align-self(stretch);
+    @include justify-content(center);
+    @include align-items(center);
+    @include calc(width, '50% - 28px');
+    padding: 1.38% 14px;
+    cursor: pointer;
+
+    &[selected=true] {
+      color: $white;
+      background-color: $green;
+    }
+  }
+}

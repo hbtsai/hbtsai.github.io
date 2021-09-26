@@ -1,0 +1,14 @@
+.warning {
+  margin: 3% 0;
+
+  p {
+    font-size: 16px;
+    line-height: 16px;
+    color: $red;
+
+    &::before {
+      vertical-align: -25%;
+      content: ''; // Overwritten in main.scss
+    }
+  }
+}

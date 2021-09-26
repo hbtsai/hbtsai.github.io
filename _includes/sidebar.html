@@ -1,0 +1,14 @@
+<div class="sidebar">
+  {% assign contentPages = site.data.pages | where:"type","content" %}
+  {% for page in contentPages %}
+    {% if include.page_number %}
+      <div class="indicator-container {% if forloop.index <= include.page_number %}visited{% endif %} {% if forloop.index == include.page_number %}active{% endif %}">
+        <div class="indicator"></div>
+      </div>
+    {% else %}
+      <div class="indicator-container {% if forloop.first %}visited active{% endif %}" onclick="scrollModule.indicatorScroll({{ forloop.index }})">
+        <div class="indicator"></div>
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>

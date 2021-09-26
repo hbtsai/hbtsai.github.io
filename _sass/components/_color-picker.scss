@@ -1,0 +1,101 @@
+.color-picker {
+  $cable-size: 40px;
+  $border-width: 4px;
+
+  position: relative;
+  z-index: 10;
+  padding-bottom: 3.25%;
+  background-color: $white;
+
+  .cable-container {
+    @include display(flex);
+    @include align-items(center);
+    @include justify-content(space-between);
+  }
+
+  .cable,
+  %cable {
+    @include background-clip(padding-box);
+    position: relative;
+    display: inline-block;
+    width: $cable-size;
+    height: $cable-size;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+
+    &.white {
+      width: $cable-size - 2;
+      height: $cable-size - 2;
+      border: 1px solid $black;
+    }
+
+    span {
+      @include background-clip(text);
+      font-size: 20px;
+      font-weight: 700;
+      line-height: $cable-size;
+      color: transparent;
+      background-image: linear-gradient(90deg, $green 0%, $blue 100%);
+    }
+  }
+
+  .color-section {
+    @include display(flex);
+    @include justify-content(space-between);
+    @include flex-wrap(wrap);
+  }
+
+  .color-container {
+    display: inline-block;
+    width: 20%;
+    margin: 1% 0;
+    text-align: center;
+  }
+
+  .color {
+    @extend %cable;
+    line-height: $cable-size;
+    opacity: .24;
+
+    &::after {
+      vertical-align: -10%;
+      content: ''; // Overwritten in main.scss
+      opacity: 0;
+    }
+
+    + span {
+      display: block;
+    }
+  }
+
+  [selected=true]:not(.color) {
+    width: $cable-size - 2 * $border-width;
+    height: $cable-size - 2 * $border-width;
+    border: $border-width solid transparent;
+
+    span {
+      line-height: $cable-size - 2 * $border-width;
+    }
+
+    &::after {
+      position: absolute;
+      top: -$border-width;
+      right: -$border-width;
+      bottom: -$border-width;
+      left: -$border-width;
+      z-index: -1;
+      background: linear-gradient(90deg, $green 0%, $blue 100%);
+      border-radius: 50%;
+      content: '';
+    }
+  }
+
+  [selected=true]:not(.cable) {
+    opacity: 1;
+
+    &::after {
+      opacity: 1;
+    }
+  }
+}

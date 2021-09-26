@@ -1,0 +1,18 @@
+<div class="embed-container {% if content.classes %}{{ content.classes }}{% endif %} {% if content.type %}{{ content.type }}{% endif %}">
+  {% if content.title %}
+    <p class="image-title">{{ content.title }}</p>
+  {% endif %}
+  {% if content.type == "image" %}
+    <img {% if content.caption %}class="captioned"{% endif %} src={{ content.embed | relative_url }} alt={{ content.embed }}>
+  {% else %}
+    {% if content.type == "svg" %}
+      <object type="image/svg+xml" data="{{ content.embed | relative_url }}"></object>
+    {% else %}
+      <iframe src="{{ content.embed | relative_url }}" width="100%" height="{{ content.height }}" scrolling="no" frameBorder="0"></iframe>
+    {% endif %}
+    <div></div>
+  {% endif %}
+  {% if content.caption %}
+    <p class="image-caption {% if content.caption_style %}{{ content.caption_style }}{% endif %}">{{ content.caption }}</p>
+  {% endif %}
+</div>

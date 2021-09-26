@@ -1,0 +1,18 @@
+.divider {
+  padding: 16px 0;
+  color: $gray;
+  text-align: center;
+  background-color: $gray-light;
+
+  img:first-child {
+    @include transform(rotate(180deg));
+  }
+
+  p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: inherit;
+  }
+}

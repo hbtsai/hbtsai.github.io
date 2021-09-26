@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CT Animation></title>
+	<link rel="icon" href="">
+	<style type="text/css">
+		html {
+      background: rgb(249,249,249);
+    }
+
+
+    .splash {
+      background: url(svg/open_large_ct.svg);
+      width: 312px;
+      height: 120px;
+      position: absolute;
+      left: 60%;
+      margin-left: -180px;
+      animation: open_large_ct 1.5s steps(14) infinite;
+    }
+
+
+
+    @keyframes open_large_ct {
+      80%, 100% { 
+        background-position: 0 -1680px;
+      }
+    }
+	</style>
+
+</head>
+<body>
+  	<div class="splash"></div>
+</body>
+</html>

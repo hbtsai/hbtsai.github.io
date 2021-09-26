@@ -1,0 +1,74 @@
+.switch-container {
+  $switch-width: 56px;
+  $switch-height: 32px;
+  $knob-ratio: .8;
+  $knob-border: 1px;
+  $black-clear: rgba(0, 0, 0, .1);
+  $black-clearer: rgba(0, 0, 0, .05);
+
+  @include flex-center;
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+  text-align: left;
+  background-color: $white;
+
+  p {
+    @include calc(width, '100% - #{$switch-width}');
+    display: inline-block;
+  }
+
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: $switch-width;
+    height: $switch-height;
+  }
+
+  input {display: none;}
+
+  .slider {
+    @include transition(.4s);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    cursor: pointer;
+    background-color: $white;
+    border: 1.5px solid $black-clear;
+    border-radius: $switch-height;
+  }
+
+  .slider::before {
+    @include transition(.4s);
+    position: absolute;
+    width: $knob-ratio * $switch-height;
+    height: $knob-ratio * $switch-height;
+    background-color: $white;
+    border: $knob-border solid $black-clear;
+    border-radius: 50%;
+    content: '';
+    box-shadow: 0 3px 1px 0 $black-clearer, 0 2px 2px 0 $black-clear, 0 3px 3px 0 $black-clearer;
+  }
+
+  input:checked ~ .switch .slider {
+    background-color: $green;
+  }
+
+  input:focus ~ .switch .slider {
+    box-shadow: 0 0 1px $green;
+  }
+
+  input:checked ~ .switch .slider::before {
+    @include transform(translateX($switch-width - $switch-height));
+  }
+
+  .switch-content {
+    display: none;
+    width: 100%;
+  }
+
+  input:checked ~ .switch-content {
+    display: block;
+  }
+}

@@ -1,0 +1,35 @@
+.list {
+  .list-title {
+    font-weight: 600;
+
+    p {
+      display: inline-block;
+      margin: 0;
+    }
+  }
+
+  img {
+    margin: 0;
+  }
+
+  ol {
+    padding: 0 $gutter-size;
+    margin: 0;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 16px;
+  }
+
+  ul {
+    padding-left: 16px;
+    margin: 0 0 3%;
+    list-style: none;
+
+    > li::before {
+      display: inline-block;
+      width: 16px;
+      margin-left: -16px;
+      content: '-';
+    }
+  }
+}

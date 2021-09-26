@@ -1,0 +1,56 @@
+.content {
+  $gutter-size: 18px;
+  $triangle-height: 16px;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  li {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  h1 {
+    margin: 0;
+    font-weight: 500;
+    color: $green;
+  }
+
+  h2 {
+    font-weight: 600;
+  }
+
+  iframe {
+    //padding: 0;
+  }
+
+  img {
+    margin-bottom: 40px;
+  }
+
+  > *:not(:first-child):not(iframe):not(.stepper) {
+    padding-right: $gutter-size;
+    padding-left: $gutter-size;
+  }
+
+  > .stepper {
+    margin-right: $gutter-size;
+    margin-left: $gutter-size;
+  }
+
+  @import 'components/title';
+  @import 'components/page-note';
+  @import 'components/embed';
+  @import 'components/row-select';
+  @import 'components/stepper';
+  @import 'components/switch';
+  @import 'components/warning';
+  @import 'components/color-picker';
+  @import 'components/list';
+  @import 'components/text';
+  @import 'components/end';
+}

@@ -1,0 +1,53 @@
+.start {
+  $banner-opacity: .8;
+  $black-clear: rgba(0, 0, 0, .16);
+
+  @include flex-center;
+  min-height: 100vh;
+  background: $white;
+
+  .landing-image-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .landing-image {
+    @include calc(background-size, '100% - 36px');
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 128%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  h1 {
+    margin: 16px 0;
+    font-weight: 600;
+  }
+
+  .banner {
+    @include background(linear-gradient(135.55deg, rgba($green, $banner-opacity) 0%, rgba($blue-azure, $banner-opacity) 60.33%, rgba($blue, $banner-opacity) 100%));
+    @include transform(translateY(-50%));
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    padding-top: 24px;
+    color: $white;
+    text-align: center;
+    box-shadow: 0 4px 4px 0 $black-clear, 0 -4px 4px 0 $black-clear;
+  }
+
+  .scrollbox-container {
+    p {
+      margin: 0;
+      font-weight: 600;
+      color: $green;
+    }
+  }
+
+  .spacer {
+    width: 100%;
+    height: 65px;
+  }
+}

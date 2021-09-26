@@ -1,0 +1,48 @@
+.embed-container {
+  @include align-self(center);
+  position: relative;
+  overflow: auto;
+  text-align: center;
+
+  object {
+    max-width: 100%;
+  }
+
+  .image-title {
+    font-size: 16px;
+    line-height: 16px;
+    color: $gray;
+  }
+
+  .captioned {
+    margin-bottom: 0;
+  }
+
+  .image-caption {
+    margin: 10px 0 40px;
+  }
+
+  .light {
+    font-size: 16px;
+    line-height: 24px;
+    color: $gray;
+  }
+
+  > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &:not(.svg):not(.image) {
+    @media (max-width: 320px) {
+      margin-left: -25px;
+    }
+
+    @media (max-width: 375px) {
+      padding: 0;
+    }
+  }
+}

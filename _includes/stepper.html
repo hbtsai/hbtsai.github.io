@@ -1,0 +1,3 @@
+<div id="{{ content.id }}" class="stepper {% if content.classes %}{{ content.classes }}{% endif %}">
+  {% for item in content.items %}<div id="{{ item.id }}" class="step {% if item.classes %}{{ item.classes }}{% endif %}" {% if item.selected %} selected="true" {% endif %} onclick="selectModule.selectItem('{{ content.id }}', '{{ item.id }}', event);">{{ item.text }}</div>{% endfor %}
+</div>

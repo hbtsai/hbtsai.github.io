@@ -1,0 +1,13 @@
+<div class="list {% if content.classes %}{{ content.classes }}{% endif %}">
+  {% if content.title %}
+    <div class="list-title">
+      <img alt="list-icon" src="{{ content.icon | relative_url }}">
+      <p> {{ content.title }}</p>
+    </div>
+  {% endif %}
+  <{% if content.type == "numbered" %}ol{% else %}ul{% endif %}>
+    {% for item in content.items %}
+      <li {% if item.classes %} class="{{ item.classes }}" {% endif %}>{{ item.text }}</li>
+    {% endfor %}
+  </{% if content.type == "numbered" %}ol{% else %}ul{% endif %}>
+</div>

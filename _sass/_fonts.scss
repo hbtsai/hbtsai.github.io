@@ -1,0 +1,121 @@
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('../css/fonts/avenir-next/avenir-next-thin.eot'); // IE9 Compat Modes
+  src: url('../css/fonts/avenir-next/avenir-next-thin.eot?#iefix') format('embedded-opentype'), // IE6-IE8
+       url('../css/fonts/avenir-next/avenir-next-thin.woff2') format('woff2'), // Super Modern Browsers
+       url('../css/fonts/avenir-next/avenir-next-thin.woff') format('woff'), // Pretty Modern Browsers
+       url('../css/fonts/avenir-next/avenir-next-thin.ttf')  format('truetype'), // Safari, Android, iOS
+       url('../css/fonts/avenir-next/avenir-next-thin.svg#91464696-717b-4eaa-adbd-0dfc5e5fd782') format('svg'); // Legacy iOS
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('../css/fonts/avenir-next/avenir-next-ultra-light.eot'); // IE9 Compat Modes
+  src: url('../css/fonts/avenir-next/avenir-next-ultra-light.eot?#iefix') format('embedded-opentype'), // IE6-IE8
+       url('../css/fonts/avenir-next/avenir-next-ultra-light.woff2') format('woff2'), // Super Modern Browsers
+       url('../css/fonts/avenir-next/avenir-next-ultra-light.woff') format('woff'), // Pretty Modern Browsers
+       url('../css/fonts/avenir-next/avenir-next-ultra-light.ttf')  format('truetype'), // Safari, Android, iOS
+       url('../css/fonts/avenir-next/avenir-next-ultra-light.svg#9fd4ea0c-b19a-4b21-9fdf-37045707dd78') format('svg'); // Legacy iOS
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('../css/fonts/avenir-next/avenir-next-ultra-light-italic.eot'); // IE9 Compat Modes
+  src: url('../css/fonts/avenir-next/avenir-next-ultra-light-italic.eot?#iefix') format('embedded-opentype'), // IE6-IE8
+       url('../css/fonts/avenir-next/avenir-next-ultra-light-italic.woff2') format('woff2'), // Super Modern Browsers
+       url('../css/fonts/avenir-next/avenir-next-ultra-light-italic.woff') format('woff'), // Pretty Modern Browsers
+       url('../css/fonts/avenir-next/avenir-next-ultra-light-italic.ttf')  format('truetype'), // Safari, Android, iOS
+       url('../css/fonts/avenir-next/avenir-next-ultra-light-italic.svg#3966f856-9dcf-48e7-88e7-7400f1b7d619') format('svg'); // Legacy iOS
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('../css/fonts/avenir-next/avenir-next-light.eot'); // IE9 Compat Modes
+  src: url('../css/fonts/avenir-next/avenir-next-light.eot?#iefix') format('embedded-opentype'), // IE6-IE8
+       url('../css/fonts/avenir-next/avenir-next-light.woff2') format('woff2'), // Super Modern Browsers
+       url('../css/fonts/avenir-next/avenir-next-light.woff') format('woff'), // Pretty Modern Browsers
+       url('../css/fonts/avenir-next/avenir-next-light.ttf')  format('truetype'), // Safari, Android, iOS
+       url('../css/fonts/avenir-next/avenir-next-light.svg#869dc33b-3685-4d74-a51c-82b435579093') format('svg'); // Legacy iOS
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('../css/fonts/avenir-next/avenir-next-light-italic.eot'); // IE9 Compat Modes
+  src: url('../css/fonts/avenir-next/avenir-next-light-italic.eot?#iefix') format('embedded-opentype'), // IE6-IE8
+       url('../css/fonts/avenir-next/avenir-next-light-italic.woff2') format('woff2'), // Super Modern Browsers
+       url('../css/fonts/avenir-next/avenir-next-light-italic.woff') format('woff'), // Pretty Modern Browsers
+       url('../css/fonts/avenir-next/avenir-next-light-italic.ttf')  format('truetype'), // Safari, Android, iOS
+       url('../css/fonts/avenir-next/avenir-next-light-italic.svg#216291a0-f927-4f75-9de7-6e36c7fd7ebf') format('svg'); // Legacy iOS
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('../css/fonts/avenir-next/avenir-next-regular.eot'); // IE9 Compat Modes
+  src: url('../css/fonts/avenir-next/avenir-next-regular.eot?#iefix') format('embedded-opentype'), // IE6-IE8
+       url('../css/fonts/avenir-next/avenir-next-regular.woff2') format('woff2'), // Super Modern Browsers
+       url('../css/fonts/avenir-next/avenir-next-regular.woff') format('woff'), // Pretty Modern Browsers
+       url('../css/fonts/avenir-next/avenir-next-regular.ttf')  format('truetype'), // Safari, Android, iOS
+       url('../css/fonts/avenir-next/avenir-next-regular.svg#52a192b1-bea5-4b48-879f-107f009b666f') format('svg'); // Legacy iOS
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('../css/fonts/avenir-next/avenir-next-italic.eot'); // IE9 Compat Modes
+  src: url('../css/fonts/avenir-next/avenir-next-italic.eot?#iefix') format('embedded-opentype'), // IE6-IE8
+       url('../css/fonts/avenir-next/avenir-next-italic.woff2') format('woff2'), // Super Modern Browsers
+       url('../css/fonts/avenir-next/avenir-next-italic.woff') format('woff'), // Pretty Modern Browsers
+       url('../css/fonts/avenir-next/avenir-next-italic.ttf')  format('truetype'), // Safari, Android, iOS
+       url('../css/fonts/avenir-next/avenir-next-italic.svg#1de7e6f4-9d4d-47e7-ab23-7d5cf10ab585') format('svg'); // Legacy iOS
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('../css/fonts/avenir-next/avenir-next-medium.eot'); // IE9 Compat Modes
+  src: url('../css/fonts/avenir-next/avenir-next-medium.eot?#iefix') format('embedded-opentype'), // IE6-IE8
+       url('../css/fonts/avenir-next/avenir-next-medium.woff2') format('woff2'), // Super Modern Browsers
+       url('../css/fonts/avenir-next/avenir-next-medium.woff') format('woff'), // Pretty Modern Browsers
+       url('../css/fonts/avenir-next/avenir-next-medium.ttf')  format('truetype'), // Safari, Android, iOS
+       url('../css/fonts/avenir-next/avenir-next-medium.svg#a89d6ad1-a04f-4a8f-b140-e55478dbea80') format('svg'); // Legacy iOS
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('../css/fonts/avenir-next/avenir-next-medium-italic.eot'); // IE9 Compat Modes
+  src: url('../css/fonts/avenir-next/avenir-next-medium-italic.eot?#iefix') format('embedded-opentype'), // IE6-IE8
+       url('../css/fonts/avenir-next/avenir-next-medium-italic.woff2') format('woff2'), // Super Modern Browsers
+       url('../css/fonts/avenir-next/avenir-next-medium-italic.woff') format('woff'), // Pretty Modern Browsers
+       url('../css/fonts/avenir-next/avenir-next-medium-italic.ttf')  format('truetype'), // Safari, Android, iOS
+       url('../css/fonts/avenir-next/avenir-next-medium-italic.svg#ed4d3c45-af64-4992-974b-c37cd12a9570') format('svg'); // Legacy iOS
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('../css/fonts/avenir-next/avenir-next-demi-bold.eot'); // IE9 Compat Modes
+  src: url('../css/fonts/avenir-next/avenir-next-demi-bold.eot?#iefix') format('embedded-opentype'), // IE6-IE8
+       url('../css/fonts/avenir-next/avenir-next-demi-bold.woff2') format('woff2'), // Super Modern Browsers
+       url('../css/fonts/avenir-next/avenir-next-demi-bold.woff') format('woff'), // Pretty Modern Browsers
+       url('../css/fonts/avenir-next/avenir-next-demi-bold.ttf')  format('truetype'), // Safari, Android, iOS
+       url('../css/fonts/avenir-next/avenir-next-demi-bold.svg#9505c912-495c-462c-899a-e61574ee9559') format('svg'); // Legacy iOS
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('../css/fonts/avenir-next/avenir-next-demi-bold-italic.eot'); // IE9 Compat Modes
+  src: url('../css/fonts/avenir-next/avenir-next-demi-bold-italic.eot?#iefix') format('embedded-opentype'), // IE6-IE8
+       url('../css/fonts/avenir-next/avenir-next-demi-bold-italic.woff2') format('woff2'), // Super Modern Browsers
+       url('../css/fonts/avenir-next/avenir-next-demi-bold-italic.woff') format('woff'), // Pretty Modern Browsers
+       url('../css/fonts/avenir-next/avenir-next-demi-bold-italic.ttf')  format('truetype'), // Safari, Android, iOS
+       url('../css/fonts/avenir-next/avenir-next-demi-bold-italic.svg#4862b373-2643-46b1-b0b5-88537c52d15c') format('svg'); // Legacy iOS
+  font-weight: 600;
+  font-style: italic;
+}

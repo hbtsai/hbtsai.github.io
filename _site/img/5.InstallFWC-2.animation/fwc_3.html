@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CT Animation></title>
+	<link rel="icon" href="">
+	<style type="text/css">
+		html {
+      background: rgb(249,249,249);
+    }
+
+
+    .FWC_anim {
+      background: url(svg/install_fwc_3.svg);
+      width: 288px;
+      height: 624px;
+      position: absolute;
+      left: 60%;
+      margin-left: -180px;
+      animation: fwc 5s steps(41) infinite;
+    }
+
+    @keyframes fwc {
+      80%, 100% { 
+        background-position: 0 -25584px;
+      }
+    }
+	</style>
+
+</head>
+<body>
+  	<div class="FWC_anim"></div>
+</body>
+</html>

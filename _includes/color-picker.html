@@ -1,0 +1,23 @@
+<div class="color-picker">
+  <div class="cable-container">
+    <p>Cable colors</p>
+    <div>
+      {% for cable in site.data.state.cables %}
+        {% if forloop.first %}
+          {% assign initialColor = cable.value %}
+        {% endif %}
+        <div id="{{ cable.name }}" class="cable {% if cable.value == '#FFF' %}white{% endif %} {% if cable.name == 'B' %}single-phase{% endif %} {% if cable.name == 'C' %}three-inline{% endif %} {% if cable.name == 'C' %}single-phase{% endif %}" {% if forloop.first %} selected="true" {% endif %} onclick=colorPickerModule.changeSelectedCable("{{ cable.name }}");>
+          <span>{{ cable.name }}</span>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="color-section">
+    {% for color in site.data.colors %}
+      <div class="color-container">
+        <div id="{{ color.name }}" class="color {% if color.value == '#FFF' %}white{% endif %}" {% if color.value == initialColor %} selected="true" {% endif %} onclick=colorPickerModule.updateColor("{{ color.value }}"); style="background-color: {{ color.value }};"></div>
+        <span>{{ color.name }}</span>
+      </div>
+    {% endfor %}
+  </div>
+</div>

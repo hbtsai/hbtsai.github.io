@@ -1,0 +1,44 @@
+html,
+%html {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  @extend %html;
+  height: 100vh;
+  max-width: 500px;
+  margin: 0 auto;
+  font-family: 'Avenir Next';
+  color: $black;
+  background-color: $gray-light;
+}
+
+.scroll-container {
+  background-color: $white;
+}
+
+.page {
+  position: relative;
+  height: 100vh;
+  overflow: scroll;
+  background-color: $white-off;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+// scss-lint:disable ImportantRule
+.hidden {
+  &:not(.svg) {
+    display: none !important;
+  }
+
+  &.svg {
+    height: 0 !important;
+  }
+}
+.space-bottom{
+  margin-bottom:16px;
+}
+// scss-lint:enable ImportantRule

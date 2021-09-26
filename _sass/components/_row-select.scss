@@ -1,0 +1,38 @@
+.row-select {
+  padding-top: 1%;
+  padding-bottom: 1%;
+  margin-bottom: 3%;
+  background: $white;
+
+  .row {
+    cursor: pointer;
+  }
+
+  .separator {
+    height: 2px;
+    margin-right: -$gutter-size;
+    margin-left: -$gutter-size;
+    border: 1px solid $gray-light;
+    box-sizing: border-box;
+  }
+
+  .row-select-title::after {
+    display: none;
+    float: right;
+    content: ''; // Overwritten in main.scss
+  }
+
+  .row-content {
+    display: none;
+  }
+
+  [selected=true] {
+    > p::after {
+      display: inline;
+    }
+
+    .row-content {
+      display: block;
+    }
+  }
+}

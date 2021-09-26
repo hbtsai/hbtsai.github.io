@@ -1,0 +1,53 @@
+.title {
+  position: relative;
+  padding: 24px 0;
+  margin-bottom: $triangle-height;
+  text-align: center;
+  background-color: $white;
+  border-bottom: 1px solid $gray-light;
+  box-shadow: 0 1px 2px 0 $gray-light;
+
+  .triangle {
+    position: absolute;
+    right: 0;
+    bottom: -$triangle-height;
+    left: 0;
+    display: block;
+    width: 0;
+    height: 0;
+    margin: 0 auto;
+    border-color: transparent;
+    border-top-color: $gray-light;
+    border-style: solid;
+    border-width: $triangle-height;
+    border-bottom-width: 0;
+
+    &::after {
+      position: absolute;
+      bottom: 1px;
+      display: block;
+      width: 0;
+      height: 0;
+      margin-left: -$triangle-height + 1px;
+      border-color: transparent;
+      border-top-color: $white;
+      border-style: solid;
+      border-width: $triangle-height - 1px;
+      border-bottom-width: 0;
+      content: ' ';
+    }
+
+    &::before {
+      @include transform(rotate(45deg));
+      position: absolute;
+      top: -29px;
+      left: -10.6px;
+      display: block;
+      width: 22.63px;
+      height: 22.63px;
+      background: transparent;
+      content: ' ';
+      box-shadow: 2px 2px 2px 0 $gray-light;
+    }
+  }
+}

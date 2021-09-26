@@ -1,0 +1,30 @@
+<div class="landing-image-container">
+  <div class="landing-image" style="background-image: url('{{ content.landing_image | relative_url }}');">
+    <div class="banner">
+      <div class="logo-container">
+        <img alt="logo" src="{{ content.logo | relative_url }}">
+      </div>
+      <h1>{{ content.title }}</h1>
+      <p>{{ content.version }}</p>
+    </div>
+  </div>
+</div>
+  <center>
+    {% assign moreLang = 0 %}
+  {% for p in site.pages %}
+    {% if p.title contains 'Start' and p.lang != '' %}
+      {% if moreLang == 0 %}
+        {{ content.lang_select }}:
+        {% assign moreLang = 1 %}
+      {% endif %}
+    <a href={{p.url}}>
+      {{ site.data.languages[p.lang].label }}
+    </a> &nbsp;
+    {% endif %}
+  {% endfor %}
+  </center>
+<div class="scrollbox-container">
+  <p>{{ content.scroll_text }}</p>
+  <img alt="scroll" src="{{ content.scroll_image | relative_url }}">
+</div>
+<div class="spacer"></div>

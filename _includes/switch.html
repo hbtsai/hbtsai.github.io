@@ -1,0 +1,13 @@
+<div class="switch-container">
+  <input id="{{ content.id }}" type="checkbox" onchange="selectModule.checkItem('{{ content.id }}', null, event);">
+  <p>{{ content.text }}</p><label class="switch" for="{{ content.id }}">
+    <div class="slider"></div>
+  </label>
+  {% if content.content %}
+    <div class="switch-content">
+      {% for content in content.content %}
+        {% include {{content.source}} %}
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>

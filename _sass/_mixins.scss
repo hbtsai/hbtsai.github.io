@@ -1,0 +1,14 @@
+@mixin flex-center() {
+  @include display(flex);
+  @include flex-direction(column);
+  @include justify-content(center);
+  @include align-items(center);
+  text-align: center;
+}
+
+// scss-lint:disable VendorPrefix
+@mixin background-clip($value) {
+  -webkit-background-clip: $value;
+  background-clip: $value;
+}
+// scss-lint:enable VendorPrefix

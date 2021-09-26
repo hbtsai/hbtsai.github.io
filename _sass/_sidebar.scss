@@ -1,0 +1,44 @@
+.sidebar {
+  $black-clear: rgba(0, 0, 0, .08);
+
+  @include flex-center;
+  @include justify-content(flex-start);
+  position: relative;
+  z-index: 1;
+  display: none;
+  float: left;
+  width: 40px;
+  height: 100%;
+  background-color: $white-off;
+  box-shadow: inset -4px 0 8px 0 $black-clear;
+
+  .indicator-container {
+    position: relative;
+    width: 100%;
+    height: 8px;
+    padding: 4px 0;
+    margin-top: 16px;
+
+    &.active::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 16px;
+      background-color: $green;
+      content: '';
+    }
+
+    .indicator {
+      width: 8px;
+      height: 100%;
+      margin: 0 auto;
+      background-color: $gray-light;
+      border-radius: 50%;
+    }
+
+    &.visited .indicator {
+      background-color: $green;
+    }
+  }
+}

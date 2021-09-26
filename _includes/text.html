@@ -1,0 +1,8 @@
+<div class="text-container {% if content.classes %}{{ content.classes }}{% endif %}">
+  {% if content.title %}
+    <p class="text-title">{{ content.title }}</p>
+  {% endif %}
+  {% if content.text %}
+    <p>{{ content.text }}</p>
+  {% endif %}
+</div>

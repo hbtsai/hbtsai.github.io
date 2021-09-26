@@ -1,0 +1,10 @@
+<div class="page">
+  {% if include.page_number > 0 %}
+    {% include sidebar.html page_number=include.page_number %}
+  {% endif %}
+  <div class="{{ page.type }}">
+    {% for content in page.content %}
+      {% include {{content.source}} %}
+    {% endfor %}
+  </div>
+</div>

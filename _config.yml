@@ -1,0 +1,4 @@
+theme: jekyll-theme-cayman
+base-url: /setup.verdigris.co
+sass:
+    style: compressed

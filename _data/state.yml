@@ -1,0 +1,21 @@
+panelType: three
+panelVoltage: 277-480
+smallCT: true
+largeCT: false
+cables:
+  - name: A
+    color: Brown
+  - name: B
+    color: Orange
+  - name: C
+    color: Yellow
+  - name: N
+    color: White
+mountingLocation: side
+breakers: spare
+chains: two
+confirmation: false
+errorType: false
+errorLight: no-error-light
+errorLightSelector: false
+errorFixSelector: false

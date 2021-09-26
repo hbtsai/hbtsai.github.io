@@ -1,0 +1,28 @@
+.end {
+  @include flex-center;
+  padding: 40px 40px 0;
+  color: $white;
+  background: linear-gradient(270deg, $green 0%, $blue 100%);
+  h5{
+    font-size: 16px;
+    font-weight: 100;
+    color: inherit;
+    margin: 0px;
+  }
+  p {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    color: inherit;
+  }
+
+  img{
+    margin-top:40px;
+  }
+
+  span {
+    font-size: 12px;
+    font-weight: 100;
+    text-decoration: underline;
+  }
+}
