@@ -6,17 +6,19 @@
       {% if moreLang == 0 %}
         {% assign moreLang = 1 %}
       {% endif %}
+
       {% for content in page.content %}
       {% if content.my_lang == site.data.languages[p.lang].icon %}
-    <a href={{p.url}}>
+    <a href="{{site.url}}{{p.url}}">
       <img src="{{ site.data.languages[p.lang].pressed_icon_url }}" >
     </a>
       {% else %}
-    <a href={{p.url}}>
+    <a href="{{site.url}}{{p.url}}">
       <img src="{{ site.data.languages[p.lang].icon_url }}" >
     </a>
       {% endif %}
       {% endfor %}
+
     {% endif %}
   {% endfor %}
   </center>
