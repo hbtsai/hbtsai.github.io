@@ -1,14 +1,52 @@
 <div class="sidebar">
+
+<img src="img/sidebar_logo.svg" class="sidebar-logo"></img>
+
   {% assign contentPages = site.data.pages | where:"type","content" %}
   {% for page in contentPages %}
     {% if include.page_number %}
-      <div class="indicator-container {% if forloop.index <= include.page_number %}visited{% endif %} {% if forloop.index == include.page_number %}active{% endif %}">
-        <div class="indicator"></div>
+      <div class="indicator-container 
+							{% if forloop.index <= include.page_number %}
+								visited
+							{% endif %} 
+							{% if forloop.index == include.page_number %}
+								active
+							{% endif %}">
+        <div class="indicator">
+					<span>{{forloop.index}}</span>
+			</div>
       </div>
+				{% if contentPages.size != forloop.index %}
+					<div class="separator-container
+							{% if forloop.index <= include.page_number %}
+								visited
+							{% endif %} 
+							{% if forloop.index == include.page_number %}
+								active
+							{% endif %}">
+						<div class="separator"></div>
+				</div>
+				{% endif %}
     {% else %}
-      <div class="indicator-container {% if forloop.first %}visited active{% endif %}" onclick="scrollModule.indicatorScroll({{ forloop.index }})">
-        <div class="indicator"></div>
+      <div class="indicator-container 
+							{% if forloop.first %}
+							visited active
+							{% endif %}" onclick="scrollModule.indicatorScroll({{ forloop.index }})">
+        <div class="indicator">
+					<span>{{forloop.index}}</span>
+				</div>
       </div>
+				{% if contentPages.size != forloop.index %}
+					<div class="separator-container
+							{% if forloop.index <= include.page_number %}
+								visited
+							{% endif %} 
+							{% if forloop.index == include.page_number %}
+								active
+							{% endif %}">
+						<div class="separator"></div>
+				</div>
+				{% endif %}
     {% endif %}
   {% endfor %}
 </div>
