@@ -4,8 +4,26 @@
 
   @include flex-center;
   min-height: 100vh;
-  background: $white;
+  background: #E0F9F7;
 
+	.ellipse {
+		position: absolute;
+		width: 382px;
+		height: 382px;
+		left: calc(50% - 382px/2);
+		bottom: 40px;
+		border-radius: 50%;
+		background: radial-gradient(85.45% 85.45% at 50.14% 100%, rgba(136, 191, 188, 0.24) 0%, rgba(196, 196, 196, 0) 100%);
+	}
+
+  .logo-container {
+		position: absolute;
+		left: 28.26%;
+		right: 28.26%;
+		top: 74.67%;
+		bottom: 20.03%;
+		padding-top: 10%;
+  }
 
   .landing-image-container {
     width: 100%;
@@ -14,11 +32,12 @@
   }
 
   .landing-image {
-    @include calc(background-size, '100% - 36px');
+    @include calc(background-size, '100% - 16px');
     position: relative;
-    width: 100%;
+    width: 90%;
     height: 0;
-    padding-top: 158%;
+    padding-top: 120%;
+    padding-bottom: 80%;
     text-align: center;
     background-position: center;
     background-repeat: no-repeat;
@@ -47,6 +66,12 @@
   }
 
   .scrollbox-container {
+		position: absolute;
+		width: 59px;
+		height: 59px;
+		top: 757px;
+		padding-top: 20%;
+
     p {
       margin: 0;
       font-weight: 600;
@@ -65,4 +90,19 @@
     height: 0;
     z-index: 1;
   }
+
+	.lang-icon {
+		position: relative;
+		width: 56px;
+		height: 56px;
+		top: 48px;
+		margin: auto;
+	}
+
+	.pressed-lang-icon {
+		position: relative;
+		top: 34px;
+		margin: auto;
+	}
+
 }

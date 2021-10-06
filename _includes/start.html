@@ -9,11 +9,11 @@
 
       {% for content in page.content %}
       {% if content.my_lang == site.data.languages[p.lang].icon %}
-    <a href="{{site.url}}{{p.url}}">
+    <a href="{{site.url}}{{p.url}}" class="pressed-lang-icon">
       <img src="{{ site.data.languages[p.lang].pressed_icon_url }}" >
     </a>
       {% else %}
-    <a href="{{site.url}}{{p.url}}">
+    <a href="{{site.url}}{{p.url}}" class="lang-icon">
       <img src="{{ site.data.languages[p.lang].icon_url }}" >
     </a>
       {% endif %}
@@ -24,20 +24,23 @@
   </center>
 </div>
 <div class="landing-image-container">
+<center>
   <div class="landing-image" style="background-image: url('{{ content.landing_image | relative_url }}');">
-    <!--
-    <div class="banner">
+    <div >
       <div class="logo-container">
         <img alt="logo" src="{{ content.logo | relative_url }}">
       </div>
+    <!--
       <h1>{{ content.title }}</h1>
       <p>{{ content.version }}</p>
-    </div>
     -->
+    </div>
+		<div class="ellipse">
+		</div>
   </div>
 </div>
+</center>
 <div class="scrollbox-container">
-  <p>{{ content.scroll_text }}</p>
   <img alt="scroll" src="{{ content.scroll_image | relative_url }}">
 </div>
 <div class="spacer"></div>

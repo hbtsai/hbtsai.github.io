@@ -1,1 +1,34 @@
-<svg width="16" height="8" viewBox="0 0 16 8" xmlns="http://www.w3.org/2000/svg"><title>Shape</title><g fill="none" fill-rule="evenodd"><g fill="#0FC8C3"><g><path d="M16 0L8 8 0 0"/></g></g></g></svg>
+<svg width="60" height="62" viewBox="0 0 60 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="29.5" cy="29.5" r="29" fill="url(#paint0_radial)" stroke="url(#paint1_linear)"/>
+<g filter="url(#filter0_dd)">
+<circle cx="30" cy="30" r="20" fill="#F1F7FA"/>
+<path d="M31 29C31 28.4477 30.5523 28 30 28C29.4477 28 29 28.4477 29 29L31 29ZM29.2929 38.7071C29.6834 39.0976 30.3166 39.0976 30.7071 38.7071L37.0711 32.3431C37.4616 31.9526 37.4616 31.3195 37.0711 30.9289C36.6805 30.5384 36.0474 30.5384 35.6569 30.9289L30 36.5858L24.3431 30.9289C23.9526 30.5384 23.3195 30.5384 22.9289 30.9289C22.5384 31.3195 22.5384 31.9526 22.9289 32.3431L29.2929 38.7071ZM29 29L29 38L31 38L31 29L29 29Z" fill="#0FC8C3"/>
+<path d="M30 21L30 23" stroke="#0FC8C3" stroke-width="2" stroke-linecap="round"/>
+</g>
+<defs>
+<filter id="filter0_dd" x="4" y="2" width="56" height="60" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="2" dy="4"/>
+<feGaussianBlur stdDeviation="4"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.533333 0 0 0 0 0.647059 0 0 0 0 0.74902 0 0 0 0.5 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="-2" dy="-4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow" result="effect2_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow" result="shape"/>
+</filter>
+<radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(11.5 16) rotate(39.2176) scale(56.1471)">
+<stop stop-color="white" stop-opacity="0.5"/>
+<stop offset="1" stop-color="#6F6F6F" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="paint1_linear" x1="79" y1="87.5" x2="16.5" y2="14" gradientUnits="userSpaceOnUse">
+<stop stop-color="#376F40" stop-opacity="0.14"/>
+<stop offset="1" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>
