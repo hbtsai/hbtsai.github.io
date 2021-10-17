@@ -4,6 +4,10 @@
   overflow: auto;
   text-align: center;
 
+  table {
+    border-spacing: 0 1em;
+  }
+
   object {
     max-width: 100%;
   }
@@ -20,6 +24,7 @@
 
   .image-caption {
     margin: 10px 0 40px;
+    text-align: left;
   }
 
   .light {

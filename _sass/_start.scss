@@ -6,6 +6,22 @@
   min-height: 100vh;
   background: #E0F9F7;
 
+  .scrollbox-container {
+		position: absolute;
+		width: 59px;
+		height: 59px;
+    text-align: center;
+		top: 70%;
+		padding-top: 20%;
+
+    p {
+      margin: 0;
+      font-weight: 600;
+      color: $green;
+    }
+  }
+
+
 	.ellipse {
 		position: absolute;
 		width: 382px;
@@ -36,7 +52,7 @@
     position: relative;
     width: 90%;
     height: 0;
-    padding-top: 120%;
+    padding-top: 110%;
     padding-bottom: 80%;
     text-align: center;
     background-position: center;
@@ -63,20 +79,6 @@
     color: $white;
     text-align: center;
     box-shadow: 0 4px 4px 0 $black-clear, 0 -4px 4px 0 $black-clear;
-  }
-
-  .scrollbox-container {
-		position: absolute;
-		width: 59px;
-		height: 59px;
-		top: 757px;
-		padding-top: 20%;
-
-    p {
-      margin: 0;
-      font-weight: 600;
-      color: $green;
-    }
   }
 
   .spacer {

@@ -2,6 +2,9 @@
   {% if content.title %}
     <p class="image-title">{{ content.title }}</p>
   {% endif %}
+  <table width=100% >
+    <tr width=100%>
+      <td width=50%>
   {% if content.type == "image" %}
     <img {% if content.caption %}class="captioned"{% endif %} src={{ content.embed | relative_url }} alt={{ content.embed }}>
   {% else %}
@@ -10,9 +13,13 @@
     {% else %}
       <iframe src="{{ content.embed | relative_url }}" width="100%" height="{{ content.height }}" scrolling="no" frameBorder="0"></iframe>
     {% endif %}
-    <div></div>
   {% endif %}
+      </td><td width=50%> 
+        
   {% if content.caption %}
     <p class="image-caption {% if content.caption_style %}{{ content.caption_style }}{% endif %}">{{ content.caption }}</p>
   {% endif %}
+      </td>
+    </tr>
+  </table>
 </div>

@@ -15,7 +15,7 @@
     - source: title.html
       title: Identify Panel
     - source: page-note.html
-      page_number: 1
+      page_number: 3
     - source: row-select.html
       id: panel-type
       rows:
@@ -50,67 +50,54 @@
     - source: warning.html
       text: The panel must have a neutral phase.
         #    - source: color-picker.html
-- type: content
-  content:
-    - source: title.html
-      title: Mounting Location
-    - source: page-note.html
-      page_number: 5
-    - source: row-select.html
-      id: mounting-location
-      rows:
-        - title: Side of Panel
-          id: side
-          selected: true
-        - title: Junction Box
-          id: box
-    - source: embed.html
-      type: image
-      embed: /img/2.MountingLocation-clearance.svg
-      title: Clearance required as follows
-    - source: embed.html
-      title: For alternate mounting options contact support@verdigris.co
+    - source: scroll.html
+      scroll_image: /img/0.Start-triangle.svg
 - type: content
   content:
     - source: title.html
       title: Components
     - source: page-note.html
-      page_number: 3
+      page_number: 5
     - source: embed.html
-      type: image
-      embed: /img/3.Components-1.DataTransmitter.svg
-      caption: Data Transmitter
+      type: svg
+      embed: /img/3.Components-1.EV2.svg
+      caption: Energy Data Gateway
     - source: embed.html
-      type: image
+      type: svg
       embed: /img/3.Components-2.CT.svg
-      caption: Current Transformer (CT)
+      caption: Verdigris Smart CT
       classes: small
+        #    - source: embed.html
+        #      type: image
+        #      embed: /img/3.Components-3.VoltageTapCabling.svg
+        #      caption: Voltage Tap Cabling
     - source: embed.html
-      type: image
-      embed: /img/3.Components-3.VoltageTapCabling.svg
-      caption: Voltage Tap Cabling
-    - source: embed.html
-      type: image
-      embed: /img/3.Components-4.ExtensionCable.svg
-      caption: 200mm, 1m, 3m CT Chain Extension Cables
-    - source: embed.html
-      type: image
+      type: svg
       embed: /img/3.Components-5.ChaseNipple.svg
       caption: 1” Chase Nipple
       classes: not-dry
     - source: embed.html
-      type: image
+      type: svg
       embed: /img/3.Components-6.Locknut.svg
       caption: 1” Locknut
     - source: embed.html
-      type: image
-      embed: /img/3.Components-7.GIM.svg
-      caption: Generic Interface Module (GIM)
+      type: svg
+      embed: /img/3.Components-4.ExtensionCable.svg
+      caption: 200mm, 1m, 3m CT Chain Extension Cables
+    - source: embed.html
+      type: svg
+      embed: /img/3.Components-SplicingConnector.svg
+      caption: Splicing Connector
       classes: large
     - source: embed.html
-      type: image
-      embed: /img/3.Components-8.LargeCTSymbol.svg
-      caption: In this installation guide, we will use this symbol to represent large CTs.
+      type: svg
+      embed: /img/3.Components-7.GIM.svg
+      caption: HCIM (High Current Interface Module)
+      classes: large
+    - source: embed.html
+      type: svg
+      embed: /img/3.Components-8.CTandHCIM.svg
+      caption: Large CT (Hinged CT or/and Coil CT)
       classes: large
     - source: embed.html
       type: image
@@ -122,7 +109,7 @@
     - source: title.html
       title: Tools &amp; Parts Required
     - source: page-note.html
-      page_number: 4
+      page_number: 6
     - source: list.html
       title: Tools you need to prepare
       type: dash
