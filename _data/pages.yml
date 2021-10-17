@@ -50,6 +50,7 @@
     - source: warning.html
       text: The panel must have a neutral phase.
         #    - source: color-picker.html
+    - source: spacer.html
     - source: scroll.html
       scroll_image: /img/0.Start-triangle.svg
 - type: content
@@ -104,6 +105,9 @@
       embed: /img/3.Components-9.MountingPlate.svg
       caption: Mounting Plate
       classes: dry
+    - source: spacer.html
+    - source: scroll.html
+      scroll_image: /img/0.Start-triangle.svg
 - type: content
   content:
     - source: title.html
@@ -111,15 +115,16 @@
     - source: page-note.html
       page_number: 6
     - source: list.html
-      title: Tools you need to prepare
+      title: Tools 
       type: dash
       icon: /img/4.Tools.svg
       items:
         - text: Wire stripper
         - text: Screwdrivers
-        - text: 1/8” Allen key
+        - text: Impact drill
+        - text: Power drill with hole cutter
         - text: Impact drill or Power drill with hole cutter (1”)  or knockout punch set (1”)
-          classes: not-dry
+          classes: dry
         - text: Impact drill (to open the panel)
           classes: dry
         - text: Power drill with hole cutter (1”)  or knockout punch set (1”)
@@ -127,13 +132,16 @@
         - text: Hammer
         - text: Drywall saw (recessed panel only)
           classes: dry
-        - text: Colored electric tape (specific to panel phase color coding) &amp; marker
+        - text: Electric tape &amp; marker
+        - text: 5V AC plug adapter
     - source: list.html
       type: dash
-      title: Parts you need to prepare
+      title: Parts
       icon: /img/4.Parts.svg
       items:
-        - text: Cable ties (up to 25 per panel)
+        - text: Colored cables
+        - text: Cable ties
+        - text: Wire nuts
         - text: Wire nuts
           classes: not-dry
         - text: Wire nuts (size dependent on size of panel breaker wires to be tapped)
@@ -144,43 +152,49 @@
           classes: dry
         - text: 3/4” flex electrical conduit
           classes: dry
+    - source: spacer.html
+    - source: scroll.html
+      scroll_image: /img/0.Start-triangle.svg
 - type: content
   content:
     - source: title.html
-      title: Install FWC
+      title: Mounting
     - source: page-note.html
-      page_number: 5
+      page_number: 7
     - source: embed.html
-      type: image
-      embed: /img/5.InstallFWC-1.FWC.svg
+      type: svg
+      embed: /img/5.Mounting-EV2.svg
       classes: not-dry
-    - source: embed.html
-      classes: side
-      embed: /img/5.InstallFWC-2.animation/fwc_1.html
-      height: 640px
-    - source: text.html
-      classes: dry
-      text: <strong>Dry wall near panel</strong> (for recessed panels) There must be at least 15.5” x 5.5” x 5.5” space near the panel on drywall. In this section, the mounting plate for the Data Transmitter will be installed only. FWC installation will come at a later stage.
-    - source: list.html
-      type: numbered
-      classes: dry
-      items:
-        - text: Select location for mounting plate on dry wall near panel.
-        - text: "Create a hole in the drywall large enough to allow the entire 3/4”  conduit connector to pass through. NOTE: Hole should not be greater than 1.9” diameter."
-        - text: Look for an existing 3/4” knockout in the panel or create a new 3/4” knockout, using the knockout punch or a power drill with a hole cutter.
-        - text: "Attach a 3⁄4” conduit connector to one end of conduit.NOTE: Conduit should be sized 4-6” longer than the required length to connect panel and drywall holes."
-        - text: "Route conduit through drywall and secure connector to panel via locknut.NOTE: The free end of conduit should stick out of the drywall hole."
-        - text: Attach3/4”conduit connector to the free end of conduit.
-        - text: Fasten connector to the internal threads of the mounting plate.
-        - text: Once conduit is secured to the mounting plate, use 4 drywall screws and anchors to attach mounting plate onto drywall.
-    - source: embed.html
-      classes: dry
-      embed: /img/5.InstallFWC-2.animation/fwc_2.html
-      height: 640px
-    - source: embed.html
-      classes: box
-      embed: /img/5.InstallFWC-2.animation/fwc_3.html
-      height: 640px
+        #    - source: embed.html
+        #      classes: side
+        #      embed: /img/5.InstallFWC-2.animation/fwc_1.html
+        #      height: 640px
+        #    - source: text.html
+        #      classes: dry
+        #      text: <strong>Dry wall near panel</strong> (for recessed panels) There must be at least 15.5” x 5.5” x 5.5” space near the panel on drywall. In this section, the mounting plate for the Data Transmitter will be installed only. FWC installation will come at a later stage.
+        #    - source: list.html
+        #      type: numbered
+        #      classes: dry
+        #      items:
+        #        - text: Select location for mounting plate on dry wall near panel.
+        #        - text: "Create a hole in the drywall large enough to allow the entire 3/4”  conduit connector to pass through. NOTE: Hole should not be greater than 1.9” diameter."
+        #        - text: Look for an existing 3/4” knockout in the panel or create a new 3/4” knockout, using the knockout punch or a power drill with a hole cutter.
+        #        - text: "Attach a 3⁄4” conduit connector to one end of conduit.NOTE: Conduit should be sized 4-6” longer than the required length to connect panel and drywall holes."
+        #        - text: "Route conduit through drywall and secure connector to panel via locknut.NOTE: The free end of conduit should stick out of the drywall hole."
+        #        - text: Attach3/4”conduit connector to the free end of conduit.
+        #        - text: Fasten connector to the internal threads of the mounting plate.
+        #        - text: Once conduit is secured to the mounting plate, use 4 drywall screws and anchors to attach mounting plate onto drywall.
+        #    - source: embed.html
+        #      classes: dry
+        #      embed: /img/5.InstallFWC-2.animation/fwc_2.html
+        #      height: 640px
+        #    - source: embed.html
+        #      classes: box
+        #      embed: /img/5.InstallFWC-2.animation/fwc_3.html
+        #      height: 640px
+    - source: spacer.html
+    - source: scroll.html
+      scroll_image: /img/0.Start-triangle.svg
 - type: content
   content:
     - source: title.html
@@ -251,22 +265,18 @@
 - type: content
   content:
     - source: title.html
-      title: Select CTs &amp; Verify CT Locations
+      title: Install CT
     - source: page-note.html
-      page_number: 8-9
+      page_number: 11
     - source: text.html
-      title: "CTs:"
-    - source: list.html
       type: dash
-      classes: small
-      items:
-        - text: Verdigris CT (60A)
-    - source: embed.html
-      classes: small
-      embed: /img/7.SelectCT-1-Open CT animation/CT-anim.html
-      height: 260px
-      caption: Pull and drag the tap to open CT
+        #classes: small
+      title: Pull and drag the tap to open CT
       caption_style: light
+    - source: embed.html
+      #classes: small
+      height: 250px
+      embed: /img/7.SelectCT-1-Open CT animation/CT-anim.html
     - source: list.html
       type: dash
       classes: large
